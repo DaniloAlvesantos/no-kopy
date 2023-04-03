@@ -48,11 +48,8 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        hero:"url('/public/office.jpg')",
+        hero:"url('/office.jpg')",
       },
-      animation: {
-        spinMenu : "spin 1s ease-out 1s"
-      }
     },
   },
   plugins: [],
