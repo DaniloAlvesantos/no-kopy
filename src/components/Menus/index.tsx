@@ -11,7 +11,7 @@ export function Headers() {
     if (document.documentElement.classList.value === "dark") {
       setDark(true);
     }
-  }, []);
+  }, [dark]);
 
   return (
     <>

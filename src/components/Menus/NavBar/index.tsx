@@ -25,6 +25,7 @@ export const NavBarMenu: React.FC<NavMenuProps> = ({
     >
       <div>
         <img
+          loading="eager"
           className="w-[4.375rem] h-[4.375rem]"
           src="/nocopy-icon-background.png"
           alt=""
