@@ -13,18 +13,19 @@ interface TeamComponentProps {
 
 export const TeamComponent: React.FC<TeamComponentProps> = (props) => {
   const { name, career, xp, type, instagramUrl, altImage, urlImage } = props;
+
   return (
-    <div className="rounded w-[18rem] h-[24rem] m-4 overflow-hidden relative group inset-0">
-      <div className="w-full h-full">
+    <div tabIndex={0} className="rounded w-[18rem] h-[24rem] m-4 overflow-hidden relative group transition-all duration-500 ease-out inset-0">
+      <div className="w-full h-full group-hover:blur-none hover:!blur-none">
         <img
           loading="lazy"
-          className="w-full h-full rounded group-hover:scale-125 delay-75 duration-200 transition-transform inset-0"
+          className="w-full h-full rounded group-hover:scale-125 duration-300 transition-transform"
           src={urlImage}
           alt={altImage}
         />
       </div>
       <div
-        className={`absolute translate-y-[100%] transition-all duration-500 group-hover:translate-y-[50%] bg-[#D9D9D9] bg-opacity-25 backdrop-blur-lg drop-shadow-lg inset-0 rounded-t`}
+        className={`absolute translate-y-[100%] object-contain transition-transform duration-500 visible ease-out group-hover:translate-y-[50%] bg-[#D9D9D9] bg-opacity-25 backdrop-blur-lg drop-shadow-lg inset-0 rounded-t`}
       >
         <main className="relative">
           <span className="flex flex-col items-center justify-center text-center mt-4">

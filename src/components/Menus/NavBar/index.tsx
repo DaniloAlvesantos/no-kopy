@@ -35,7 +35,7 @@ export const NavBarMenu: React.FC<NavMenuProps> = ({
         <div
           onClick={() => setMenu(!menu)}
           className={`${
-            menu ? "rotate-180" : ""
+            menu && "rotate-180"
           } duration-150 transition ease-out w-12 h-12 text-light-500 object-fill`}
         >
           {!menu ? <List className="w-12 h-12" /> : <X className="w-12 h-12" />}

@@ -2,6 +2,7 @@ import React from "react";
 import { PrimaryCard } from "../components/cards/card-primary";
 import { Headers } from "../components/Menus";
 import { TeamComponent } from "../components/team/component";
+import { Info } from "@phosphor-icons/react";
 
 const teamInfo = [
   {
@@ -65,7 +66,7 @@ export function Home() {
           <h2 className="m-4 w-11/12 sm:w-[36rem] p-[1.5rem] bg-darkBlue-500 text-light-500 font-poppins font-light rounded text-center">
             Conheça o nosso time
           </h2>
-          <div>
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {teamInfo.map((info) => (
               <TeamComponent
                 key={info.id}
@@ -80,6 +81,22 @@ export function Home() {
               />
             ))}
           </div>
+          <section className="relative w-full flex p-4  md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center my-8">
+            <div>
+              <img
+                className="w-[20rem] h-[20rem] lg:w-[25rem] lg:h-[25rem] hidden lg:block object-contain"
+                src="/mockup.png"
+                alt=""
+              />
+            </div>
+            <div className="flex-col">
+              <h2 className="font-poppins text-xl sm:text-3xl md:text-4xl lg:text-[2.6rem]">Soluções inovadoras para <br /> impulsionar seus <strong className="text-primaryPurple-500">projetos.</strong></h2>
+              <p className="font-oswald sm:text-xl lg:text-2xl mt-4">
+                Impulsione seus projetos com sites, vídeos, reels, designs
+                modernos e administrando suas mídias e vendas.
+              </p>
+            </div>
+          </section>
         </div>
       </main>
     </>
