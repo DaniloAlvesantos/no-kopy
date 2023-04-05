@@ -3,6 +3,7 @@ import { PrimaryCard } from "../components/cards/card-primary";
 import { Headers } from "../components/Menus";
 import { TeamComponent } from "../components/team/component";
 import { Info } from "@phosphor-icons/react";
+import { Button } from "../components/Buttons";
 
 const teamInfo = [
   {
@@ -13,7 +14,7 @@ const teamInfo = [
     type: "Front-end",
     instagramUrl: "https://www.instagram.com/danilodos9818/",
     altImage: "Integrante Danilo",
-    urlImage: "team/danilo.jpg",
+    urlImage: "https://i.ibb.co/tKL36pm/danilo3.jpg",
   },
   {
     id: crypto.randomUUID(),
@@ -23,7 +24,7 @@ const teamInfo = [
     type: "Grafico",
     instagramUrl: "https://www.instagram.com/israelbdesigner/",
     altImage: "Integrante Israel",
-    urlImage: "team/israel.jpeg",
+    urlImage: "https://i.ibb.co/kQmNz8Y/israel.jpg",
   },
   {
     id: crypto.randomUUID(),
@@ -33,7 +34,7 @@ const teamInfo = [
     type: "ADM",
     instagramUrl: "https://www.instagram.com/odrielmatosviagem/",
     altImage: "Integrant Odriel",
-    urlImage: "team/odriel.jpg",
+    urlImage: "https://i.ibb.co/h2gGLPd/odriel.jpg",
   },
 ];
 
@@ -81,20 +82,31 @@ export function Home() {
               />
             ))}
           </div>
-          <section className="relative w-full flex p-4  md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center my-8">
-            <div>
+          <section className="relative w-full flex p-4 md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center my-8 bg-darkBlue-500 text-light-500">
+            <div className="m-4">
               <img
+                loading="lazy"
                 className="w-[20rem] h-[20rem] lg:w-[25rem] lg:h-[25rem] hidden lg:block object-contain"
                 src="/mockup.png"
                 alt=""
               />
             </div>
             <div className="flex-col">
-              <h2 className="font-poppins text-xl sm:text-3xl md:text-4xl lg:text-[2.6rem]">Soluções inovadoras para <br /> impulsionar seus <strong className="text-primaryPurple-500">projetos.</strong></h2>
-              <p className="font-oswald sm:text-xl lg:text-2xl mt-4">
+              <h2 className="font-poppins text-xl sm:text-3xl md:text-4xl lg:text-[2.6rem]">
+                Soluções inovadoras para <br /> impulsionar seus{" "}
+                <strong className="text-primaryPurple-500 lg:text-darkBlue-400">
+                  projetos.
+                </strong>
+              </h2>
+              <p className="font-oswald sm:text-xl lg:text-2xl my-4">
                 Impulsione seus projetos com sites, vídeos, reels, designs
                 modernos e administrando suas mídias e vendas.
               </p>
+              <Button
+                text="Começar"
+                primary={false}
+                color="primaryPurple-500"
+              />
             </div>
           </section>
         </div>
