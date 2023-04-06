@@ -105,7 +105,7 @@ export function Home() {
               <Button
                 text="Começar"
                 primary={false}
-                color="primaryPurple-500"
+                color="purple"
               />
             </div>
           </section>
