@@ -2,8 +2,8 @@ import React from "react";
 import { PrimaryCard } from "../components/cards/card-primary";
 import { Headers } from "../components/Menus";
 import { TeamComponent } from "../components/team/component";
-import { Info } from "@phosphor-icons/react";
 import { Button } from "../components/Buttons";
+import { LightbulbFilament, Lightning, Monitor } from "@phosphor-icons/react";
 
 const teamInfo = [
   {
@@ -35,6 +35,27 @@ const teamInfo = [
     instagramUrl: "https://www.instagram.com/odrielmatosviagem/",
     altImage: "Integrant Odriel",
     urlImage: "https://i.ibb.co/h2gGLPd/odriel.jpg",
+  },
+];
+
+const skils = [
+  {
+    id: crypto.randomUUID(),
+    title: "Layouts exclusivos",
+    text: "Layouts criativos, com o foco na modernidade",
+    icon: <LightbulbFilament size={32} color="#f7f7f2" />,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Layouts responsivos",
+    text: "Responsividade para seu site. Para qualquer dispositivo acesse seu site!",
+    icon: <Monitor size={32} color="#f7f7f2" />,
+  },
+  {
+    id: crypto.randomUUID(),
+    title: "Novas características",
+    text: "Ideias que vão impulsionar suas vendas e visualizações",
+    icon: <Lightning size={32} color="#f7f7f2" />,
   },
 ];
 
@@ -82,7 +103,11 @@ export function Home() {
               />
             ))}
           </div>
-          <section className="relative w-full flex p-4 md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center my-8 bg-darkBlue-500 text-light-500">
+
+          <section
+            id="solution"
+            className="relative w-full flex py-4 md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center my-8"
+          >
             <div className="m-4">
               <img
                 loading="lazy"
@@ -98,15 +123,40 @@ export function Home() {
                   projetos.
                 </strong>
               </h2>
-              <p className="font-oswald sm:text-xl lg:text-2xl my-4">
+              <p className="font-oswald text-lg sm:text-xl lg:text-2xl my-4">
                 Impulsione seus projetos com sites, vídeos, reels, designs
                 modernos e administrando suas mídias e vendas.
               </p>
-              <Button
-                text="Começar"
-                primary={false}
-                color="purple" 
-              />
+              <Button text="Começar" primary={false} color="purple" />
+            </div>
+          </section>
+          <section
+            id="skills"
+            className="flex flex-col items-center justify-center bg-darkBlue-500 text-light-500 w-full p-4"
+          >
+            <div className="">
+              <h2 className="font-poppins text-lg">
+                Conjunto de funcionalidade que a no copy faz para se destacar.{" "}
+              </h2>
+              <p className="font-oswald text-[#e4e4e4] md:text-lg my-4">
+                Confica algumas de nossas habilidade que irá fazer você destacar
+                seu comercio, por sua volta!
+              </p>
+            </div>
+            <div className="">
+              {skils.map((skill) => (
+                <div
+                  key={skill.id}
+                  //bg-gradient!
+                  className="my-4 bg-secondaryPurple-500 rounded p-2 w-full"
+                >
+                  <span className="flex items-center justify-center text-center my-6 relative">
+                    <span className="absolute left-0">{skill.icon}</span>
+                    <h3 className="font-poppins font-thin">{skill.title}</h3>
+                  </span>
+                  <p className="font-poppins font-light text-center mt-2 bg-[#e4e4e4] text-primaryBlue-500 rounded-md p-4">{skill.text}</p>
+                </div>
+              ))}
             </div>
           </section>
         </div>

@@ -2,7 +2,7 @@ import React from "react";
 
 interface PrimaryCard {
   title?: string;
-  children: JSX.Element | string;
+  children: JSX.Element | string | any;
   full?: boolean;
 }
 
@@ -19,7 +19,7 @@ export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
       ) : (
         ""
       )}
-      <p className={`${full ? "text-base sm:text-lg md:text-xl lg:text-2xl p-2 md:p-10" : "text-base p-2" } text-center text-light-500 font-oswald font-normal p-2 my-2`}>
+      <p className={`${full ? "text-[1.1rem] md:text-xl lg:text-2xl p-2 md:p-10" : "text-base p-2" }  text-light-500 font-oswald font-normal p-2 my-2`}>
         {children}
       </p>
     </div>

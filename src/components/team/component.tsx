@@ -25,7 +25,7 @@ export const TeamComponent: React.FC<TeamComponentProps> = (props) => {
         />
       </div>
       <div
-        className={`absolute translate-y-[100%] object-contain transition-transform duration-500 visible ease-out group-hover:translate-y-[50%] bg-[#D9D9D9] bg-opacity-25 backdrop-blur-lg drop-shadow-lg inset-0 rounded-t`}
+        className={`absolute translate-y-[100%] object-contain transition-transform duration-500 visible ease-out group-hover:translate-y-[50%] bg-light-500 bg-opacity-40 backdrop-blur-md inset-0 rounded-t`}
       >
         <main className="relative">
           <span className="flex flex-col items-center justify-center text-center mt-4">
