@@ -16,7 +16,7 @@ export const TeamComponent: React.FC<TeamComponentProps> = (props) => {
 
   return (
     <div tabIndex={0} className="rounded w-[18rem] h-[24rem] m-4 overflow-hidden relative group transition-all duration-500 ease-out inset-0">
-      <div className="w-full h-full group-hover:blur-none hover:!blur-none">
+      <div className="w-full h-full">
         <img
           loading="lazy"
           className="w-full h-full rounded group-hover:scale-125 duration-300 transition-transform"
