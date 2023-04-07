@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   mode: "jit",
-  darkMode: "class",
   content: ["./src/**/*.tsx"],
   theme: {
     extend: {
@@ -9,7 +8,7 @@ module.exports = {
         dark: {
           400: "#222222",
           500: "#02010A",
-          600:"#121212",
+          600: "#121212",
         },
         darkBlue: {
           800: "#01011A",
@@ -31,6 +30,7 @@ module.exports = {
           700: "#0B003B",
           600: "#0F0046",
           500: "#140152",
+          400: "#442797",
         },
         primaryPurple: {
           900: "#09003B",
@@ -48,7 +48,10 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        hero:"url('/office.jpg')",
+        hero: "url('/office.jpg')",
+      },
+      boxShadow: {
+        cardShadow: "1px 2px 10px 1px #12121250",
       },
     },
   },

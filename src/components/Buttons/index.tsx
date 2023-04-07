@@ -6,43 +6,61 @@ interface ButtonProps {
   img?: React.ReactElement;
   color?: "purple" | "second-purple" | "white" | "darkblue";
   margin?: string;
-  dark?: boolean;
-  textColor?: "light-500" | "dark-500";
+  hoverTextDark?: boolean;
 }
 // terminar de estlizar o modo primary do botão
 export const Button: React.FC<ButtonProps> = (props) => {
-  let { text, primary, color, img, margin, dark, textColor } = props;
-  const [style, setStyle] = React.useState<string>()
+  let { text, primary, color, img, margin, hoverTextDark } = props;
+  const [style, setStyle] = React.useState<string>();
   React.useEffect(() => {
-    switch(color) {
-      case "purple": setStyle("border-primaryPurple-500 hover:bg-primaryPurple-500");
-      break;
-      case "second-purple": setStyle("border-secondaryPurple-500 hover:bg-secondaryPurple-500");
-      break;
-      case "white": setStyle("border-light-500 hover:bg-light-500");
-      break;
-      case "darkblue": setStyle("border-darkBlue-500 hover:bg-darkBlue-500");
-      break;
-      default: setStyle("border-[#121212] hover:bg-[#121212]");
+    switch (color) {
+      case "purple":
+        primary
+          ? setStyle("bg-primaryPurple-500 hover:bg-primaryPurple-600")
+          : setStyle("border-primaryPurple-500 hover:bg-primaryPurple-500");
+        break;
+      case "second-purple":
+        primary
+          ? setStyle("bg-secondaryPurple-500 hover:bg-secondaryPurple-400")
+          : setStyle("border-secondaryPurple-500 hover:bg-secondaryPurple-500");
+        break;
+      case "white":
+        primary
+          ? setStyle("bg-light-500")
+          : setStyle("border-light-500 hover:bg-light-500");
+        break;
+      case "darkblue":
+        primary
+          ? setStyle("bg-darkBlue-500 hover:bg-darkBlue-600")
+          : setStyle("border-darkBlue-500 hover:bg-darkBlue-500");
+        break;
+      default:
+        primary
+          ? setStyle("bg-[#121212] hover:bg-[#111111]")
+          : setStyle("border-[#121212] hover:bg-[#121212]");
     }
-  },[props])
-
+  }, [props]);
 
   return (
     <>
       <button
         className={
           primary
-            ? ""
+            ? `${style} w-[10rem] p-2 rounded text-light-500 transition-colors duration-200 ease-in-out`
             : `bg-transparent border-2 ${style} rounded-full px-8 py-2  transition-colors duration-500 ease-in-out m-${margin} group`
         }
       >
         <p
-          className={`font-poppins text-${textColor} ${
-            color === "white" && "group-hover:text-dark-500 transition-colors"
+          className={`font-poppins ${
+            hoverTextDark
+              ? "group-hover:text-dark-500 transition-colors"
+              : "group-hover:text-light-500 transition-colors"
           }`}
         >
-          {text}
+          <div className={`flex items-center justify-center relative`}>
+            <h2>{text}</h2>
+            <span className="absolute right-0 object-fill">{img}</span>
+          </div>
         </p>
       </button>
     </>
