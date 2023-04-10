@@ -12,13 +12,15 @@ export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
   const [style, setStyle] = useState<string>();
 
   useEffect(() => {
-    switch(color) {
-      case "purple": setStyle("from-primaryPurple-500 to-secondaryPurple-500")
-      break;
-      case "white": setStyle("from-light-500 to-light-500 md:shadow-cardShadow")
-      break;
+    switch (color) {
+      case "purple":
+        setStyle("from-primaryPurple-500 to-secondaryPurple-500");
+        break;
+      case "white":
+        setStyle("from-light-500 to-light-500 md:shadow-cardShadow");
+        break;
     }
-  },[props])
+  }, [props]);
 
   return (
     <div
@@ -28,7 +30,9 @@ export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
     >
       {title ? (
         <h2
-          className={`${color === "white" && "text-dark-500"} text-light-500 font-poppins font-light uppercase ${
+          className={`${
+            color === "white" && "text-dark-500"
+          } text-light-500 font-poppins font-light uppercase ${
             full
               ? "text-base md:text-lg lg:text-xl text-start"
               : "text-center sm:text-start"
