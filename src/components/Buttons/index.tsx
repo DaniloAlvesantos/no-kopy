@@ -1,18 +1,11 @@
 import * as React from "react";
+import { ButtonProps } from "./props";
 
-interface ButtonProps {
-  text: string;
-  primary: boolean;
-  img?: React.ReactElement;
-  color?: "purple" | "second-purple" | "white" | "darkblue";
-  margin?: string;
-  hoverTextDark?: boolean;
-}
-// terminar de estlizar o modo primary do botão
 export const Button: React.FC<ButtonProps> = (props) => {
-  let { text, primary, color, img, margin, hoverTextDark } = props;
+  let { text, primary, color, margin, hoverTextDark } = props;
   const [style, setStyle] = React.useState<string>();
-  React.useEffect(() => {
+
+  function colors(){
     switch (color) {
       case "purple":
         primary
@@ -39,6 +32,10 @@ export const Button: React.FC<ButtonProps> = (props) => {
           ? setStyle("bg-[#121212] hover:bg-[#111111]")
           : setStyle("border-[#121212] hover:bg-[#121212]");
     }
+  }
+
+  React.useEffect(() => {
+    colors();
   }, [props]);
 
   return (

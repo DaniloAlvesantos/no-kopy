@@ -1,17 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { PrimaryCardProps } from "./type";
 
-interface PrimaryCard {
-  title?: string;
-  color: "purple" | "white";
-  children: JSX.Element | string | any;
-  full?: boolean;
-}
-
-export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
+export const PrimaryCard: React.FC<PrimaryCardProps> = (props) => {
   const { title, children, full, color } = props;
   const [style, setStyle] = useState<string>();
 
-  useEffect(() => {
+  function colors() {
     switch (color) {
       case "purple":
         setStyle("from-primaryPurple-500 to-secondaryPurple-500");
@@ -20,6 +14,10 @@ export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
         setStyle("from-light-500 to-light-500 md:shadow-cardShadow");
         break;
     }
+  }
+
+  useEffect(() => {
+    colors();
   }, [props]);
 
   return (

@@ -29,7 +29,7 @@ export const NavBarMenu: React.FC<NavMenuProps> = ({
             menu && "rotate-180"
           } duration-150 transition ease-out w-12 h-12 text-light-500 object-fill`}
         >
-          {!menu ? <List className="w-12 h-12" /> : <X className="w-12 h-12" />}
+          {menu ? <X className="w-12 h-12" /> : <List className="w-12 h-12" />}
         </div>
       </div>
       <ul className="hidden md:flex items-center mr-4">
