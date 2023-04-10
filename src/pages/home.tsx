@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { PrimaryCard } from "../components/cards/card-primary";
 import { Headers } from "../components/Menus";
-import { TeamComponent } from "../components/Team/component";
+import { TeamComponent } from "../components/Team";
 import { Button } from "../components/Buttons";
 import { LightbulbFilament, Lightning, Monitor } from "@phosphor-icons/react";
 import AOS from "aos";
