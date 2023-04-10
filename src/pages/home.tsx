@@ -75,8 +75,8 @@ export function Home() {
   return (
     <div className="overflow-hidden">
       <Headers />
-      <section className="-z-10 bg-hero w-full h-[25rem] md:h-[30rem] flex items-center justify-center bg-cover bg-fixed bg-no-repeat object-cover relative">
-        <div className="-z-10 bg-gradient-to-b  from-dark-500 via-dark-500 opacity-75 to-dark-500 absolute top-0 right-0 w-full h-full" />
+      <section className="-z-10 bg-hero bg-top lg:bg-[center_top] bg-cover bg-fixed bg-no-repeat w-full h-[25rem] md:h-[30rem] flex items-center justify-center object-cover relative">
+        <div className="-z-10 bg-gradient-to-b  from-dark-500 via-[#111111] to-[#121212] opacity-75 absolute top-0 right-0 w-full h-full" />
         <span>
           <h1
             data-aos="fade-right"
@@ -151,7 +151,7 @@ export function Home() {
             >
               <h2 className="font-poppins text-xl sm:text-3xl md:text-4xl lg:text-[2.6rem]">
                 Soluções inovadoras para <br /> impulsionar seus{" "}
-                <strong className="text-primaryPurple-500 lg:text-darkBlue-400">
+                <strong className="text-primaryPurple-500 lg:text-darkBlue-400 lg:leading-[4rem]">
                   projetos.
                 </strong>
               </h2>
@@ -216,10 +216,9 @@ export function Home() {
                   id="name"
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Informe seu nome"
-                  className="bg-light-500 w-[15rem] border-b-2 border-secondaryPurple-500 my-4 md:m-4 p-2 font-poppins outline-none focus:border-0 focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
+                  className="bg-light-500 w-[15rem] border-2 rounded-sm border-secondaryPurple-500 my-4 p-2 font-poppins outline-none focus:border-0 focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
                 />
                 <a
-                  className="md:m-4"
                   target="_blank"
                   href={`https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? me chamo ${name}, vim conversar sobre négocios.`}
                 >

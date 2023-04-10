@@ -49,7 +49,7 @@ module.exports = {
         poppins: ["Poppins", "sans-serif"],
       },
       backgroundImage: {
-        hero: "url('/office.jpg')",
+        hero: "url('https://images.unsplash.com/photo-1588856122867-363b0aa7f598?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=773&q=80')",
       },
       boxShadow: {
         cardShadow: "1px 2px 10px 1px #12121250",
