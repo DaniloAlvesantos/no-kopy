@@ -75,7 +75,7 @@ export function Home() {
   return (
     <div className="overflow-hidden">
       <Headers />
-      <section className="-z-10 bg-hero bg-top lg:bg-[center_top] bg-cover bg-fixed bg-no-repeat w-full h-[25rem] md:h-[30rem] flex items-center justify-center object-cover relative">
+      <section className="-z-10 bg-hero bg-top lg:bg-[center_top] bg-cover lg:bg-fixed bg-no-repeat w-full h-[25rem] md:h-[30rem] flex items-center justify-center object-cover relative">
         <div className="-z-10 bg-gradient-to-b  from-dark-500 via-[#111111] to-[#121212] opacity-75 absolute top-0 right-0 w-full h-full" />
         <span>
           <h1
@@ -216,7 +216,7 @@ export function Home() {
                   id="name"
                   onChange={(e) => setName(e.target.value)}
                   placeholder="Informe seu nome"
-                  className="bg-light-500 w-[15rem] border-2 rounded-sm border-secondaryPurple-500 my-4 p-2 font-poppins outline-none focus:border-0 focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
+                  className="bg-light-500 w-[15rem] border-2 rounded-sm border-secondaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
                 />
                 <a
                   target="_blank"
