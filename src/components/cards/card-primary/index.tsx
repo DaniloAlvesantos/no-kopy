@@ -25,7 +25,7 @@ export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
   return (
     <div
       className={`${
-        full ? "w-full rounded-none m-0" : "w-full md:w-11/12 m-4 p-4"
+        full ? "w-full rounded-none m- py-8" : "w-full md:w-11/12 m-4 p-8"
       } min-h-[10rem] bg-gradient-to-b ${style} p-4 rounded relative`}
     >
       {title ? (
@@ -36,7 +36,7 @@ export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
             full
               ? "text-base md:text-lg lg:text-xl text-start"
               : "text-center sm:text-start"
-          } sm:m-2  md:m-4 text-xl`}
+          } sm:m-2  md:m-4 mb-4 text-xl`}
         >
           {title}
         </h2>

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { PrimaryCard } from "../components/cards/card-primary";
 import { Headers } from "../components/Menus";
 import { TeamComponent } from "../components/Team/component";
@@ -66,10 +66,11 @@ const skils = [
 ];
 
 export function Home() {
-  
   useEffect(() => {
     AOS.init({ once: true });
-  },[]);
+  }, []);
+
+  const [name, setName] = useState<string>();
 
   return (
     <div className="overflow-hidden">
@@ -84,7 +85,7 @@ export function Home() {
             className="font-oswald font-light text-center text-lg md:text-2xl lg:text-3xl my-4 md:my-12 text-light-500"
           >
             Nós somos
-            <strong className="font-poppins font-thin">no copy</strong>
+            <strong className="font-poppins font-thin"> no copy</strong>
           </h1>
           <h2
             data-aos="fade-left"
@@ -98,9 +99,11 @@ export function Home() {
       </section>
       <main className="flex flex-col items-center justify-center w-full">
         <PrimaryCard color="purple" title="Sobre" full={true}>
-          Somos uma agência formada por freelancers experientes, que oferece um
-          atendimento personalizado e exclusivo, relatório semanal completo e
-          projeção de estratégias e projetos.
+          <p>
+            Somos uma agência formada por freelancers experientes, que oferece
+            um atendimento personalizado e exclusivo, relatório semanal completo
+            e projeção de estratégias e projetos.
+          </p>
         </PrimaryCard>
         <div
           className="w-full flex flex-col items-center justify-center my-4"
@@ -204,20 +207,21 @@ export function Home() {
                 Entre em contato!
               </h2>
               <p className="font-oswald font-normal text-base sm:text-lg md:text-xl lg:text-2xl my-2">
-                Vamos pedir que informe apenas seu nome, para que você esteje entrando em
-                contato conosco.
+                Vamos pedir que informe apenas seu nome, para que você esteje
+                entrando em contato conosco.
               </p>
               <div className="flex flex-col items-start justify-center">
                 <input
                   type="text"
                   id="name"
+                  onChange={(e) => setName(e.target.value)}
                   placeholder="Informe seu nome"
                   className="bg-light-500 w-[15rem] border-b-2 border-secondaryPurple-500 my-4 md:m-4 p-2 font-poppins outline-none focus:border-0 focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
                 />
                 <a
                   className="md:m-4"
                   target="_blank"
-                  href="https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? vim conversar sobre négocios."
+                  href={`https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? me chamo ${name}, vim conversar sobre négocios.`}
                 >
                   <Button text="Enviar" color="second-purple" primary={true} />
                 </a>
