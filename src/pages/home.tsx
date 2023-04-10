@@ -1,11 +1,12 @@
 import React, { useEffect } from "react";
 import { PrimaryCard } from "../components/cards/card-primary";
 import { Headers } from "../components/Menus";
-import { TeamComponent } from "../components/team/component";
+import { TeamComponent } from "../components/Team/component";
 import { Button } from "../components/Buttons";
 import { LightbulbFilament, Lightning, Monitor } from "@phosphor-icons/react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { Footer } from "../components/Footer";
 
 const teamInfo = [
   {
@@ -65,11 +66,11 @@ const skils = [
 ];
 
 export function Home() {
+  
   useEffect(() => {
-    AOS.init({
-      once: true,
-    });
-  }, []);
+    AOS.init({ once: true });
+  },[]);
+
   return (
     <div className="overflow-hidden">
       <Headers />
@@ -82,7 +83,7 @@ export function Home() {
             data-aos-easing="ease-in-out"
             className="font-oswald font-light text-center text-lg md:text-2xl lg:text-3xl my-4 md:my-12 text-light-500"
           >
-            Nós somos{" "}
+            Nós somos
             <strong className="font-poppins font-thin">no copy</strong>
           </h1>
           <h2
@@ -199,21 +200,22 @@ export function Home() {
           </section>
           <PrimaryCard color="white">
             <div id="contact" className="text-dark-500">
-              <h2 className="font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl">
+              <h2 className="font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl my-2">
                 Entre em contato!
               </h2>
-              <p className="font-oswald font-normal text-base sm:text-lg md:text-xl lg:text-2xl">
-                Vamos pedir que informe apenas seu nome, para estar entrando em
+              <p className="font-oswald font-normal text-base sm:text-lg md:text-xl lg:text-2xl my-2">
+                Vamos pedir que informe apenas seu nome, para que você esteje entrando em
                 contato conosco.
               </p>
-              <div className="flex items-center justify-center flex-col">
+              <div className="flex flex-col items-start justify-center">
                 <input
                   type="text"
                   id="name"
                   placeholder="Informe seu nome"
-                  className="bg-light-500 w-[15rem] border-b-2 border-secondaryPurple-500 m-4 p-2 font-poppins outline-none focus:border-0 focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
+                  className="bg-light-500 w-[15rem] border-b-2 border-secondaryPurple-500 my-4 md:m-4 p-2 font-poppins outline-none focus:border-0 focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
                 />
                 <a
+                  className="md:m-4"
                   target="_blank"
                   href="https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? vim conversar sobre négocios."
                 >
@@ -224,6 +226,7 @@ export function Home() {
           </PrimaryCard>
         </div>
       </main>
+      <Footer />
     </div>
   );
 }

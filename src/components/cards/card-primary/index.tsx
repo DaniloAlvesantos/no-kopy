@@ -13,9 +13,9 @@ export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
 
   useEffect(() => {
     switch(color) {
-      case "purple": setStyle("from-primaryPurple-500 to-secondaryPurple-500");
+      case "purple": setStyle("from-primaryPurple-500 to-secondaryPurple-500")
       break;
-      case "white": setStyle("from-light-500 to-light-500 shadow-cardShadow")
+      case "white": setStyle("from-light-500 to-light-500 md:shadow-cardShadow")
       break;
     }
   },[props])
@@ -23,7 +23,7 @@ export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
   return (
     <div
       className={`${
-        full ? "w-full rounded-none m-0" : "w-full md:w-11/12 m-4"
+        full ? "w-full rounded-none m-0" : "w-full md:w-11/12 m-4 p-4"
       } min-h-[10rem] bg-gradient-to-b ${style} p-4 rounded relative`}
     >
       {title ? (
@@ -39,7 +39,7 @@ export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
       ) : (
         ""
       )}
-      <p
+      <span
         className={`${
           full
             ? "text-[1.1rem] md:text-xl lg:text-2xl p-2 md:p-10"
@@ -47,7 +47,7 @@ export const PrimaryCard: React.FC<PrimaryCard> = (props) => {
         }  text-light-500 font-oswald font-normal p-2 my-2`}
       >
         {children}
-      </p>
+      </span>
     </div>
   );
 };

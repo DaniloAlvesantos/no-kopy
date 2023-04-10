@@ -57,10 +57,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
               : "group-hover:text-light-500 transition-colors"
           }`}
         >
-          <div className={`flex items-center justify-center relative`}>
-            <h2>{text}</h2>
-            <span className="absolute right-0 object-fill">{img}</span>
-          </div>
+          {text}
         </p>
       </button>
     </>
