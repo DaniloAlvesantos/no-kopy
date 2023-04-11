@@ -14,7 +14,7 @@ export const Footer: React.FC = () => {
           </li>
           <li className="cursor-pointer hover:bg-primaryPurple-400 hover:opacity-50 hover:backdrop-blur-md p-4 rounded transition-all ease-out duration-300">
             <a href="#">
-                <img className="group-hover:opacity-100 transition-all ease-out duration-300" id="gmail" src="gmail.svg" alt="nosso email" />
+                <img  className="group-hover:opacity-100 transition-all ease-out duration-300" id="gmail" src="gmail.svg" alt="nosso email" />
             </a>
           </li>
         </ul>
