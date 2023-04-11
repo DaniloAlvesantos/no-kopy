@@ -2,10 +2,10 @@ import * as React from "react";
 import { ButtonProps } from "./props";
 
 export const Button: React.FC<ButtonProps> = (props) => {
-  let { text, primary, color, margin, hoverTextDark } = props;
+  let { text, primary, color, margin, hoverTextDark, onClick } = props;
   const [style, setStyle] = React.useState<string>();
 
-  function colors(){
+  function colors() {
     switch (color) {
       case "purple":
         primary
@@ -41,6 +41,8 @@ export const Button: React.FC<ButtonProps> = (props) => {
   return (
     <>
       <button
+        tabIndex={0}
+        onClick={onClick}
         className={
           primary
             ? `${style} w-[10rem] p-2 rounded text-light-500 transition-colors duration-200 ease-in-out`
@@ -48,6 +50,7 @@ export const Button: React.FC<ButtonProps> = (props) => {
         }
       >
         <p
+          tabIndex={0}
           className={`font-poppins ${
             hoverTextDark
               ? "group-hover:text-dark-500 transition-colors"

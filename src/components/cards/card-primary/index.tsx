@@ -28,6 +28,7 @@ export const PrimaryCard: React.FC<PrimaryCardProps> = (props) => {
     >
       {title ? (
         <h2
+          tabIndex={0}
           className={`${
             color === "white" && "text-dark-500"
           } text-light-500 font-poppins font-light uppercase ${
@@ -42,6 +43,7 @@ export const PrimaryCard: React.FC<PrimaryCardProps> = (props) => {
         ""
       )}
       <span
+        tabIndex={0}
         className={`${
           full
             ? "text-[1.1rem] md:text-xl lg:text-2xl p-2 md:p-10"

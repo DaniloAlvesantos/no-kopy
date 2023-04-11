@@ -19,7 +19,7 @@ export const TeamComponent: React.FC<TeamComponentProps> = (props) => {
       <div className="w-full h-full">
         <img
           loading="lazy"
-          className="w-full h-full rounded group-hover:scale-125 duration-300 transition-transform"
+          className="w-full h-full object-fill rounded group-hover:scale-125 duration-300 transition-transform"
           src={urlImage}
           alt={altImage}
         />

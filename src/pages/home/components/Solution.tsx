@@ -7,7 +7,7 @@ export const Solution: React.FC = () => {
   React.useEffect(() => {
     AOS.init({ once: true });
   }, []);
-  
+
   return (
     <section
       id="solution"
@@ -30,17 +30,28 @@ export const Solution: React.FC = () => {
         data-aos-easing="ease-in-out"
         className="flex-col"
       >
-        <h2 className="font-poppins text-xl sm:text-3xl md:text-4xl lg:text-[2.6rem]">
+        <h2
+          tabIndex={0}
+          className="font-poppins text-xl sm:text-3xl md:text-4xl lg:text-[2.6rem]"
+        >
           Soluções inovadoras para <br /> impulsionar seus{" "}
           <strong className="text-primaryPurple-500 lg:text-darkBlue-400 lg:leading-[4rem]">
             projetos.
           </strong>
         </h2>
-        <p className="font-oswald text-lg sm:text-xl lg:text-2xl my-4">
+        <p
+          tabIndex={0}
+          className="font-oswald text-lg sm:text-xl lg:text-2xl my-4"
+        >
           Impulsione seus projetos com sites, vídeos, reels, designs modernos e
           administrando suas mídias e vendas.
         </p>
-        <Button text="Começar" primary={false} color="purple" />
+        <Button
+          onClick={() => null}
+          text="Começar"
+          primary={false}
+          color="purple"
+        />
       </div>
     </section>
   );

@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
         <p className="font-oswald text-sm md:text-base lg:text-lg">Confira nossas redes sociais e meios de comunicação.</p>
         <ul className="inline-flex group items-center justify-center gap-4 my-8 md:my-4">
           <li className="cursor-pointer hover:bg-primaryPurple-400 hover:opacity-50 hover:backdrop-blur-md p-4 rounded transition-all ease-out duration-300">
-            <a href="#">
+            <a target="_blank" href="https://www.instagram.com/agencianocopy">
                 <img className="group-hover:opacity-100 transition-all ease-out duration-300" id="instagram" src="/instagram.svg" alt="nosso instagram" />
             </a>
           </li>
@@ -19,7 +19,7 @@ export const Footer: React.FC = () => {
           </li>
         </ul>
       </div>
-      <h4 className="text-light-500 font-poppins absolute bottom-2">&#169; 2023 no copy</h4>
+      <h3 className="text-light-500 font-poppins absolute bottom-2">&#169; 2023 no copy</h3>
     </footer>
   );
 };

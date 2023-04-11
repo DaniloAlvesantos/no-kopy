@@ -35,7 +35,7 @@ const teamInfo = [
     career: "Gestor Administrativo",
     xp: 4,
     type: "ADM",
-    instagramUrl: "https://www.instagram.com/odrielmatosviagem/",
+    instagramUrl: "https://www.instagram.com/odrielmatos_nocopy/",
     altImage: "Integrant Odriel",
     urlImage: "https://i.ibb.co/h2gGLPd/odriel.jpg",
   },
@@ -48,8 +48,10 @@ export function Home() {
     <div className="overflow-hidden">
       <Headers />
       <Hero />
-      <main className="flex flex-col items-center justify-center w-full">
-        
+      <main
+        className="flex flex-col items-center justify-center w-full"
+        id="about"
+      >
         <PrimaryCard color="purple" title="Sobre" full={true}>
           <p>
             Somos uma agência formada por freelancers experientes, que oferece
@@ -84,32 +86,39 @@ export function Home() {
 
         <Solution />
         <Skills />
-        <PrimaryCard color="white">
-          <div id="contact" className="text-dark-500">
-            <h2 className="font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl my-2">
-              Entre em contato!
-            </h2>
-            <p className="font-oswald font-normal text-base sm:text-lg md:text-xl lg:text-2xl my-2">
-              Vamos pedir que informe apenas seu nome, para que você esteje
-              entrando em contato conosco.
-            </p>
-            <div className="flex flex-col items-start justify-center">
-              <input
-                type="text"
-                id="name"
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Informe seu nome"
-                className="bg-light-500 w-[15rem] border-2 rounded-sm border-secondaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
-              />
-              <a
-                target="_blank"
-                href={`https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? me chamo ${name}, vim conversar sobre négocios.`}
-              >
-                <Button text="Enviar" color="second-purple" primary={true} />
-              </a>
+        <span className="w-full flex items-center justify-center my-8">
+          <PrimaryCard color="white">
+            <div id="contact" className="text-dark-500">
+              <h2 className="font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl my-2">
+                Entre em contato!
+              </h2>
+              <p className="font-oswald font-normal text-base sm:text-lg md:text-xl lg:text-2xl my-2">
+                Vamos pedir que informe apenas seu nome, para que você esteje
+                entrando em contato conosco.
+              </p>
+              <div className="flex flex-col items-start justify-center">
+                <input
+                  type="text"
+                  id="name"
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Informe seu nome"
+                  className="bg-light-500 w-[15rem] border-2 rounded border-secondaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
+                />
+                <a
+                  target="_blank"
+                  href={`https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? me chamo ${name}, vim conversar sobre négocios.`}
+                >
+                  <Button
+                    onClick={() => null}
+                    text="Enviar"
+                    color="second-purple"
+                    primary={true}
+                  />
+                </a>
+              </div>
             </div>
-          </div>
-        </PrimaryCard>
+          </PrimaryCard>
+        </span>
       </main>
       <Footer />
     </div>

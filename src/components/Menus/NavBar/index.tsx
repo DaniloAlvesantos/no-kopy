@@ -29,21 +29,21 @@ export const NavBarMenu: React.FC<NavMenuProps> = ({
             menu && "rotate-180"
           } duration-150 transition ease-out w-12 h-12 text-light-500 object-fill`}
         >
-          {menu ? <X className="w-12 h-12" /> : <List className="w-12 h-12" />}
+          {menu ? <X tabIndex={0} className="w-12 h-12" /> : <List tabIndex={0} className="w-12 h-12" />}
         </div>
       </div>
       <ul className="hidden md:flex items-center mr-4">
         <li className="m-4 text-light-500 uppercase font-poppins bg-primaryPurple-500 py-3 px-6 rounded hover:text-gray-400 hover:bg-primaryPurple-600 transition-colors ease-linear cursor-pointer">
-          <a href="#about">Sobre</a>
+          <a tabIndex={0} href="#about">Sobre</a>
         </li>
         <li className="m-4 text-light-500 uppercase font-poppins hover:text-gray-400 transition-colors ease-linear cursor-pointer">
-          <a href="#team">Integrantes</a>
+          <a tabIndex={0} href="#team">Integrantes</a>
         </li>
         <li className="m-4 text-light-500 uppercase font-poppins hover:text-gray-400 transition-colors ease-linear cursor-pointer">
-          <a href="#projects">Projetos</a>
+          <a tabIndex={0} href="#projects">Projetos</a>
         </li>
         <li className="m-4 text-light-500 uppercase font-poppins hover:text-gray-400 transition-colors ease-linear cursor-pointer">
-          <a href="#contact">Contratar</a>
+          <a tabIndex={0} href="#contact">Contratar</a>
         </li>
       </ul>
     </nav>

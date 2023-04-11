@@ -5,5 +5,6 @@ export interface ButtonProps {
   color?: "purple" | "second-purple" | "white" | "darkblue";
   margin?: string;
   hoverTextDark?: boolean;
+  onClick:(e: React.MouseEvent<HTMLElement>) => void;
 }
 

@@ -9,7 +9,7 @@ export const Hero: React.FC = () => {
   return (
     <section className="-z-10 bg-hero bg-top lg:bg-[center_top] bg-cover lg:bg-fixed bg-no-repeat w-full h-[25rem] md:h-[30rem] flex items-center justify-center object-cover relative">
       <div className="-z-10 bg-gradient-to-b  from-dark-500 via-[#111111] to-[#121212] opacity-75 absolute top-0 right-0 w-full h-full" />
-      <span>
+      <span tabIndex={0}>
         <h1
           data-aos="fade-right"
           data-aos-duration="1500"
