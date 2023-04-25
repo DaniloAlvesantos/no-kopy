@@ -25,27 +25,17 @@ export const AsideBarMenu: React.FC<AsideBarMenuProps> = ({
         />
       </span>
       <ul className="w-full gap-4 flex flex-col items-center justify-center text-center">
-        <li className=" text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
+        <li className="hover:bg-slate-100 w-full p-2 hover:text-dark-500 text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
           <a onClick={() => setMenu(false)} href="#about">Sobre</a>
         </li>
-        <li className=" text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
+        <li className="hover:bg-slate-100 w-full p-2 hover:text-dark-500 text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
           <a onClick={() => setMenu(false)} href="#team">Nosso Time</a>
         </li>
-        <li className=" text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
+        <li className="hover:bg-slate-100 w-full p-2 hover:text-dark-500 text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
           <a onClick={() => setMenu(false)} href="#">Projetos</a>
         </li>
-        <li className=" text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
+        <li className="hover:bg-slate-100 w-full p-2 hover:text-dark-500 text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
           <a onClick={() => setMenu(false)} href="#contact">Contratar</a>
-        </li>
-      </ul>
-      <ul className="absolute bottom-0 flex items-center justify-center gap-4">
-        <li className="my-2 mx-1 object-fill">
-          <a target="_blank" href="https://www.instagram.com/agencianocopy">
-            <img loading="lazy" src="instagram.svg" alt="instagram" />
-          </a>
-        </li>
-        <li className="my-2 mx-1 object-fill">
-          <img loading="lazy" src="gmail.svg" alt="email" />
         </li>
       </ul>
     </aside>

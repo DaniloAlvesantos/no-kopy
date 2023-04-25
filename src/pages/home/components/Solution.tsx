@@ -11,7 +11,7 @@ export const Solution: React.FC = () => {
   return (
     <section
       id="solution"
-      className="relative w-full flex py-4 md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center my-8"
+      className="relative w-full flex py-4 md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center -mb-4 sm:-mb-0 my-8"
     >
       <div className="m-4">
         <img
@@ -51,6 +51,16 @@ export const Solution: React.FC = () => {
           text="Começar"
           primary={false}
           color="purple"
+        />
+        <img
+          data-aos="fade-up"
+          data-aos-duration="1000"
+          data-aos-delay="300"
+          data-aos-easing="ease-in-out"
+          loading="lazy"
+          className="w-[15rem] h-[18rem] md:w-[20rem] m-2 sm:m-4 lg:hidden object-contain"
+          src="/solution.svg"
+          alt=""
         />
       </div>
     </section>

@@ -25,7 +25,7 @@ export const Hero: React.FC = () => {
           data-aos-easing="ease-in-out"
           className="font-oswald font-light text-center text-lg md:text-2xl lg:text-3xl my-4 md:my-12 text-light-500"
         >
-          Agência para impulcionar seus négocios
+          Agência de marketing para impulcionar seus projetos
         </h2>
       </span>
     </section>

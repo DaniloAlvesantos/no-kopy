@@ -17,7 +17,7 @@ const teamInfo = [
     type: "Front-end",
     instagramUrl: "https://www.instagram.com/danilodos9818/",
     altImage: "Integrante Danilo",
-    urlImage: "https://i.ibb.co/tKL36pm/danilo3.jpg",
+    urlImage: "https://i.ibb.co/ft13q0h/1.png",
   },
   {
     id: crypto.randomUUID(),
@@ -37,7 +37,27 @@ const teamInfo = [
     type: "ADM",
     instagramUrl: "https://www.instagram.com/odrielmatos_nocopy/",
     altImage: "Integrant Odriel",
-    urlImage: "https://i.ibb.co/h2gGLPd/odriel.jpg",
+    urlImage: "https://i.ibb.co/j6DR3XY/4.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "Gustavo Matos",
+    career: "Social Media",
+    xp: 3,
+    type: "Instagram",
+    instagramUrl: "https://www.instagram.com/odrielmatos_nocopy/",
+    altImage: "Integrant Gustavo",
+    urlImage: "https://i.ibb.co/fp7GN6y/3.png",
+  },
+  {
+    id: crypto.randomUUID(),
+    name: "Gabriel Farias",
+    career: "Gestor de Tráfego Pago",
+    xp: 2,
+    type: "Adsense",
+    instagramUrl: "https://www.instagram.com/odrielmatos_nocopy/",
+    altImage: "Integrant Gabriel",
+    urlImage: "https://i.ibb.co/b3pQBnG/2.png",
   },
 ];
 
@@ -55,10 +75,54 @@ export function Home() {
         <PrimaryCard color="purple" title="Sobre" full={true}>
           <p>
             Somos uma agência formada por freelancers experientes, que oferece
-            um atendimento personalizado e exclusivo, relatório semanal completo
-            e projeção de estratégias e projetos.
+            um atendimento personalizado e exclusivo.Relatórios semanais,
+            projeção de estratégias e projetos. Atualmente atuamos presencial na
+            cidade de Itapira SP, e via on-line por fora de nossa cidade.
           </p>
         </PrimaryCard>
+
+        <Solution />
+        <Skills />
+
+        <span className="w-full flex items-center justify-center md:my-8">
+          <PrimaryCard color="white">
+            <div id="contact" className="text-dark-500 relative">
+              <h2 className="font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl my-2">
+                Entre em contato!
+              </h2>
+              <p className="font-oswald font-normal text-base sm:text-lg md:text-xl lg:text-2xl my-2">
+                Pedimos que você informe seu nome, para estar sendo direcionado
+                a nosso whatsapp, para estar entrando em contato e fechando
+                orçamentos.
+              </p>
+              <div className="flex flex-col items-start justify-center">
+                <input
+                  type="text"
+                  id="name"
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Informe seu nome"
+                  className="bg-light-500 w-[15rem] border-2 rounded border-secondaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
+                />
+                <a
+                  target="_blank"
+                  href={`https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? me chamo ${name}, vim conversar sobre négocios.`}
+                >
+                  <Button
+                    onClick={() => null}
+                    text="Enviar"
+                    color="second-purple"
+                    primary={true}
+                  />
+                </a>
+              </div>
+              <img
+                className="mt-12 w-[18rem] sm:w-[22rem]"
+                src="/contact-us.svg"
+                alt=""
+              />
+            </div>
+          </PrimaryCard>
+        </span>
 
         <div
           className="w-full flex flex-col items-center justify-center my-4"
@@ -83,42 +147,6 @@ export function Home() {
             ))}
           </div>
         </div>
-
-        <Solution />
-        <Skills />
-        <span className="w-full flex items-center justify-center my-8">
-          <PrimaryCard color="white">
-            <div id="contact" className="text-dark-500">
-              <h2 className="font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl my-2">
-                Entre em contato!
-              </h2>
-              <p className="font-oswald font-normal text-base sm:text-lg md:text-xl lg:text-2xl my-2">
-                Vamos pedir que informe apenas seu nome, para que você esteje
-                entrando em contato conosco.
-              </p>
-              <div className="flex flex-col items-start justify-center">
-                <input
-                  type="text"
-                  id="name"
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Informe seu nome"
-                  className="bg-light-500 w-[15rem] border-2 rounded border-secondaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
-                />
-                <a
-                  target="_blank"
-                  href={`https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? me chamo ${name}, vim conversar sobre négocios.`}
-                >
-                  <Button
-                    onClick={() => null}
-                    text="Enviar"
-                    color="second-purple"
-                    primary={true}
-                  />
-                </a>
-              </div>
-            </div>
-          </PrimaryCard>
-        </span>
       </main>
       <Footer />
     </div>

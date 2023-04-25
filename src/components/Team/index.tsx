@@ -15,7 +15,7 @@ export const TeamComponent: React.FC<TeamComponentProps> = (props) => {
   const { name, career, xp, type, instagramUrl, altImage, urlImage } = props;
 
   return (
-    <div tabIndex={0} className="rounded w-[18rem] h-[24rem] m-4 overflow-hidden relative group transition-all duration-500 ease-out">
+    <div tabIndex={0} className="rounded w-[18rem] h-[24rem] m-4 overflow-hidden relative group hover:shadow-cardShadow transition-all duration-500 ease-out">
       <div className="w-full h-full">
         <img
           loading="lazy"

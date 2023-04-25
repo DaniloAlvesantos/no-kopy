@@ -11,7 +11,7 @@ export const PrimaryCard: React.FC<PrimaryCardProps> = (props) => {
         setStyle("from-primaryPurple-500 to-secondaryPurple-500");
         break;
       case "white":
-        setStyle("from-light-500 to-light-500 md:shadow-cardShadow");
+        setStyle("from-light-500 to-light-500 shadow-cardShadow");
         break;
     }
   }
