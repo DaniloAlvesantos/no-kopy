@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
         <p className="text-light-500 font-poppins sm:text-lg md:text-xl lg:text-2xl">Sua agência de marketing digital, que irá decolar seus négocios.</p>
       </span>
       <div className="flex items-center flex-col text-light-500">
-        <p className="font-oswald text-sm sm:text-base md:text-base lg:text-lg">Confira nossas redes sociais e meios de comunicação.</p>
+        <p className="font-oswald text-sm sm:text-base md:text-base lg:text-lg">Confira nossas redes sociais.</p>
         <ul className="inline-flex group items-center justify-center gap-4 my-8 md:my-4">
           <li className="cursor-pointer hover:bg-primaryPurple-400 hover:opacity-50 hover:backdrop-blur-md p-4 rounded transition-all ease-out duration-300">
             <a target="_blank" href="https://www.instagram.com/agencianocopy">
