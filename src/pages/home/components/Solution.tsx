@@ -19,7 +19,7 @@ export const Solution: React.FC = () => {
           data-aos-duration="1000"
           data-aos-easing="ease-in-out"
           loading="lazy"
-          className="w-[20rem] h-[20rem] lg:w-[25rem] lg:h-[25rem] hidden lg:block object-contain "
+          className="w-[20rem] h-[20rem] lg:w-[25rem] lg:h-[25rem] hidden lg:block object-contain"
           src="/mockup.png"
           alt=""
         />

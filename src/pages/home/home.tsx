@@ -27,7 +27,7 @@ const teamInfo = [
     type: "Grafico",
     instagramUrl: "https://www.instagram.com/israelbdesigner/",
     altImage: "Integrante Israel",
-    urlImage: "https://i.ibb.co/kQmNz8Y/israel.jpg",
+    urlImage: "https://i.ibb.co/s6T9J2C/5.png",
   },
   {
     id: crypto.randomUUID(),
@@ -131,7 +131,7 @@ export function Home() {
           <h2 className="m-4 w-11/12 sm:w-[36rem] p-[1.5rem] bg-darkBlue-500 text-light-500 font-poppins font-light rounded text-center">
             Conheça o nosso time
           </h2>
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
             {teamInfo.map((info) => (
               <TeamComponent
                 key={info.id}
