@@ -15,7 +15,7 @@ const teamInfo = [
     career: "Desenvolvedor",
     xp: 3,
     type: "Front-end",
-    instagramUrl: "https://www.instagram.com/danilodos9818/",
+    instagramUrl: "https://www.instagram.com/dalves_santos/",
     altImage: "Integrante Danilo",
     urlImage: "https://i.ibb.co/ft13q0h/1.png",
   },
