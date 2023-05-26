@@ -7,27 +7,32 @@ export const Hero: React.FC = () => {
     AOS.init({ once: true });
   }, []);
   return (
-    <section className="-z-10 bg-hero bg-top lg:bg-[center_top] bg-cover lg:bg-fixed bg-no-repeat w-full h-[25rem] md:h-[30rem] flex items-center justify-center object-cover relative">
-      <div className="-z-10 bg-gradient-to-b  from-dark-500 via-[#111111] to-[#121212] opacity-75 absolute top-0 right-0 w-full h-full" />
-      <span tabIndex={0}>
+    <section className="-z-10 bg-gradient-to-tr from-primaryPurple-400 to-primaryPurple-500 w-full h-[100vh] flex justify-items-start lg:items-center justify-center p-4 py-[7rem] md:py-[4rem] lg:py-[6rem] relative">
+      <span>
         <h1
           data-aos="fade-right"
           data-aos-duration="1500"
           data-aos-easing="ease-in-out"
-          className="font-oswald font-light text-center text-lg md:text-2xl lg:text-3xl my-4 md:my-12 text-light-500"
+          className="font-poppins font-bold text-center text-lg md:text-2xl lg:text-3xl my-4 md:my-12 text-light-500"
         >
-          Nós somos
-          <strong className="font-poppins font-thin"> no copy</strong>
+          No Copy agência que irá impulcionar seus négocios
         </h1>
         <h2
           data-aos="fade-left"
           data-aos-duration="1700"
           data-aos-easing="ease-in-out"
-          className="font-oswald font-light text-center text-lg md:text-2xl lg:text-3xl my-4 md:my-12 text-light-500"
+          className="font-poppins font-light text-center text-[14px] sm:text-base md:text-lg my-4 md:my-12 text-light-500"
         >
-          Agência de marketing para impulcionar seus projetos
+          Somos uma agência formada por freelancers experientes, que oferece um
+          atendimento personalizado e exclusivo.Relatórios semanais, projeção de
+          estratégias e projetos.
         </h2>
       </span>
+      <img
+        src="rocket.svg"
+        alt=""
+        className="w-[22rem] h-[18rem] sm:h-[20rem] lg:w-full lg:h-full absolute -bottom-4 -z-10 lg:static object-fill"
+      />
     </section>
   );
 };

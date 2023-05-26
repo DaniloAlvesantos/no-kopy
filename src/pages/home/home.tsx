@@ -15,7 +15,7 @@ const teamInfo = [
     career: "Desenvolvedor",
     xp: 3,
     type: "Front-end",
-    instagramUrl: "https://www.instagram.com/dalves_santos/",
+    instagramUrl: "https://www.instagram.com/danilodos9818/",
     altImage: "Integrante Danilo",
     urlImage: "https://i.ibb.co/ft13q0h/1.png",
   },
@@ -70,59 +70,48 @@ export function Home() {
       <Hero />
       <main
         className="flex flex-col items-center justify-center w-full"
-        id="about"
       >
-        <PrimaryCard color="purple" title="Sobre" full={true}>
-          <p>
-            Somos uma agência formada por freelancers experientes, que oferece
-            um atendimento personalizado e exclusivo.Relatórios semanais,
-            projeção de estratégias e projetos. Atualmente atuamos presencial na
-            cidade de Itapira SP, e via on-line por fora de nossa cidade.
-          </p>
-        </PrimaryCard>
 
         <Solution />
         <Skills />
 
-        <span className="w-full flex items-center justify-center md:my-8">
-          <PrimaryCard color="white">
-            <div id="contact" className="text-dark-500 relative">
-              <h2 className="font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl my-2">
-                Entre em contato!
-              </h2>
-              <p className="font-oswald font-normal text-base sm:text-lg md:text-xl lg:text-2xl my-2">
-                Pedimos que você informe seu nome, para estar sendo direcionado
-                a nosso whatsapp, para estar entrando em contato e fechando
-                orçamentos.
-              </p>
-              <div className="flex flex-col items-start justify-center">
-                <input
-                  type="text"
-                  id="name"
-                  onChange={(e) => setName(e.target.value)}
-                  placeholder="Informe seu nome"
-                  className="bg-light-500 w-[15rem] border-2 rounded border-secondaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
-                />
-                <a
-                  target="_blank"
-                  href={`https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? me chamo ${name}, vim conversar sobre négocios.`}
-                >
-                  <Button
-                    onClick={() => null}
-                    text="Enviar"
-                    color="second-purple"
-                    primary={true}
-                  />
-                </a>
-              </div>
-              <img
-                className="mt-12 w-[18rem] sm:w-[22rem]"
-                src="/contact-us.svg"
-                alt=""
+        <div className="w-full flex items-center justify-center my-6 sm:my-8 md:my-12 lg:my-16 p-4 ">
+          <div id="contact" className="text-dark-500 relative">
+            <h2 className="font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl my-2">
+              Entre em contato!
+            </h2>
+            <p className="font-oswald font-normal text-base sm:text-lg md:text-xl lg:text-2xl my-2">
+              Pedimos que você informe seu nome, para estar sendo direcionado a
+              nosso whatsapp, para estar entrando em contato e fechando
+              orçamentos.
+            </p>
+            <div className="flex flex-col items-start justify-center">
+              <input
+                type="text"
+                id="name"
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Informe seu nome"
+                className="bg-light-500 w-[15rem] border-2 rounded border-secondaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
               />
+              <a
+                target="_blank"
+                href={`https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? me chamo ${name}, vim conversar sobre négocios.`}
+              >
+                <Button
+                  onClick={() => null}
+                  text="Enviar"
+                  color="second-purple"
+                  primary={true}
+                />
+              </a>
             </div>
-          </PrimaryCard>
-        </span>
+            <img
+              className="mt-12 w-[18rem] sm:w-[22rem]"
+              src="/contact-us.svg"
+              alt=""
+            />
+          </div>
+        </div>
 
         <div
           className="w-full flex flex-col items-center justify-center my-4"

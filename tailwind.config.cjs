@@ -53,6 +53,7 @@ module.exports = {
       },
       boxShadow: {
         cardShadow: "1px 2px 10px 1px #12121250",
+        cardShadow_sm: "1px 2px 8px #12121250",
       },
     },
   },
