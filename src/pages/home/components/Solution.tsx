@@ -11,7 +11,7 @@ export const Solution: React.FC = () => {
   return (
     <section
       id="solution"
-      className="relative w-full flex flex-col-reverse gap-4 md:flex-row p-6 sm:p-8 md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center"
+      className="relative w-full flex flex-col-reverse gap-4 md:flex-row p-4 sm:p-8 md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center"
     >
       <div className="m-4">
         <img
@@ -29,11 +29,11 @@ export const Solution: React.FC = () => {
         data-aos="fade-left"
         data-aos-duration="1200"
         data-aos-easing="ease-in-out"
-        className="flex flex-col items-center md:items-start justify-center text-center md:text-start"
+        className="flex flex-col items-center md:items-start justify-center text-center md:text-start mt-4 md:mt-0"
       >
         <h2
           tabIndex={0}
-          className="font-poppins text-xl sm:text-3xl md:text-[32px] lg:text-[2.6rem]"
+          className="font-poppins text-2xl sm:text-3xl md:text-[32px] lg:text-[2.6rem]"
         >
           Soluções inovadoras para  impulsionar seus{" "}
           <strong className="text-primaryPurple-500 lg:text-darkBlue-400 lg:leading-[4rem]">
@@ -42,7 +42,7 @@ export const Solution: React.FC = () => {
         </h2>
         <p
           tabIndex={0}
-          className="font-oswald text-[17px] sm:text-xl lg:text-2xl my-4"
+          className="font-poppins text-base sm:text-xl lg:text-2xl my-4"
         >
           Impulsione seus projetos com sites, vídeos, reels, designs modernos e
           administrando suas mídias e vendas.

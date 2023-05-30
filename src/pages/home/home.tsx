@@ -68,19 +68,19 @@ export function Home() {
     <div className="overflow-hidden">
       <Headers />
       <Hero />
-      <main
-        className="flex flex-col items-center justify-center w-full"
-      >
-
+      <main className="flex flex-col items-center justify-center w-full">
         <Solution />
         <Skills />
 
-        <div className="w-full flex items-center justify-center my-6 sm:my-8 md:my-12 lg:my-16 p-4 ">
-          <div id="contact" className="text-dark-500 relative">
-            <h2 className="font-poppins font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl my-2">
+        <div className="w-full flex flex-col items-center justify-center my-4 sm:my-6 md:my-12 lg:my-16 p-4 md:p-8 ">
+          <div
+            id="contact"
+            className="text-dark-500 bg-primaryPurple-400 rounded-sm sm:bg-transparent sm:rounded-none p-2 flex flex-col text-center sm:text-start items-center sm:items-start justify-center relative"
+          >
+            <h2 className="font-poppins font-medium text-xl sm:text-2xl md:text-3xl lg:text-3xl my-2">
               Entre em contato!
             </h2>
-            <p className="font-oswald font-normal text-base sm:text-lg md:text-xl lg:text-2xl my-2">
+            <p className="font-poppins font-normal text-[15px] sm:text-base md:text-xl lg:text-xl my-2 md:w-11/12">
               Pedimos que você informe seu nome, para estar sendo direcionado a
               nosso whatsapp, para estar entrando em contato e fechando
               orçamentos.
@@ -91,7 +91,7 @@ export function Home() {
                 id="name"
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Informe seu nome"
-                className="bg-light-500 w-[15rem] border-2 rounded border-secondaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-secondaryPurple-500 duration-300 transition-all"
+                className="bg-light-500 w-[15rem] border-2 rounded border-primaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-primaryPurple-500 duration-300 transition-all"
               />
               <a
                 target="_blank"
@@ -100,7 +100,7 @@ export function Home() {
                 <Button
                   onClick={() => null}
                   text="Enviar"
-                  color="second-purple"
+                  color="purple"
                   primary={true}
                 />
               </a>

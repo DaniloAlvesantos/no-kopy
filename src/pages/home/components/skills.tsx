@@ -8,21 +8,21 @@ const skils = [
     id: crypto.randomUUID(),
     title: "Layouts exclusivos",
     text: "Layouts criativos, com o foco na modernidade",
-    icon: <LightbulbFilament size={32} color="#02010A" />,
+    icon: <LightbulbFilament size={32} color="#f1f1f1" />,
     delayAnimation: "150",
   },
   {
     id: crypto.randomUUID(),
     title: "Layouts responsivos",
     text: "Responsividade para seu site. Para qualquer dispositivo acesse seu site!",
-    icon: <Monitor size={32} color="#02010A" />,
+    icon: <Monitor size={32} color="#f1f1f1" />,
     delayAnimation: "300",
   },
   {
     id: crypto.randomUUID(),
     title: "Novas características",
     text: "Ideias que vão impulsionar suas vendas e visualizações",
-    icon: <Lightning size={32} color="#02010A" />,
+    icon: <Lightning size={32} color="#f1f1f1" />,
     delayAnimation: "450",
   },
 ];
@@ -35,25 +35,25 @@ export const Skills: React.FC = () => {
   return (
     <section
       id="skills"
-      className="flex flex-col items-center md:items-start justify-center text-dark-500 w-full p-4 lg:grid md:grid-cols-2 relative"
+      className="flex flex-col items-center md:items-start justify-center text-dark-500 w-full p-4 lg:grid md:grid-cols-2 relative my-4"
     >
-      <img className="absolute w-[10rem] h-[10rem] -top-[5rem] -left-[4rem] blur-sm rotate-90" src="/blob.svg" alt="" />
-      <div className="md:my-6 mx-4 p-4">
+      <img className="absolute w-[10rem] h-[10rem] -top-[5.5rem] -left-[4rem] blur-sm rotate-90" src="/blob.svg" alt="" />
+      <div className="my-12 md:my-16">
         <h2
           tabIndex={0}
-          className="font-poppins text-lg sm:text-xl md:text-3xl lg:text-4xl"
+          className="font-poppins font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl"
         >
           Conjunto de funcionalidade que a no copy faz para se destacar.
         </h2>
         <p
           tabIndex={0}
-          className="font-oswald text-dark-400 text-base sm:text-lg md:text-xl lg:text-2xl lg:my-8 my-4"
+          className="font-poppins text-dark-400 text-[15px] sm:text-lg md:text-xl lg:text-2xl lg:my-8 my-4"
         >
           Confica algumas de nossas habilidade de forma resumida, que vamos te
           mostrar como você irá se destacar no meio digital e por sua volta!
         </p>
       </div>
-      <div id="skills" className="w-full p-4 overflow-hidden">
+      <div id="skills" className="w-full">
         {skils.map((skill) => (
           <div
             data-aos="fade-left"
@@ -61,7 +61,7 @@ export const Skills: React.FC = () => {
             data-aos-easing="ease-in-out"
             data-aos-delay={skill.delayAnimation}
             key={skill.id}
-            className="my-4 bg-gradient-to-br from-[#e4e4e4] to-light-500 shadow-cardShadow_sm rounded p-2 w-full"
+            className="my-4 bg-gradient-to-br from-secondaryPurple-400 to-primaryPurple-400 text-light-500 shadow-cardShadow_sm rounded p-2 w-full"
           >
             <span
               tabIndex={0}
@@ -76,7 +76,7 @@ export const Skills: React.FC = () => {
             </span>
             <p
               tabIndex={0}
-              className="font-poppins font-normal text-center mt-2 bg-[#f1f1f1] shadow-md text-primaryPurple-500 lg:text-lg rounded-md p-4"
+              className="font-poppins font-normal text-center mt-2 bg-slate-50 shadow-md text-primaryPurple-500 lg:text-lg rounded-md p-4"
             >
               {skill.text}
             </p>

@@ -14,7 +14,7 @@ export const AsideBarMenu: React.FC<AsideBarMenuProps> = ({
       onTouchMove={() => setMenu(false)}
       className={`fixed top-0 left-0  ${
         menu ? "-translate-x-0" : "-translate-x-full"
-      } w-[14rem] h-full bg-gradient-to-b from-darkBlue-500 to-primaryPurple-500 flex items-center justify-center flex-col z-20 duration-300 ease-in-out rounded-br rounded-tr md:hidden`}
+      } w-[14rem] h-full bg-gradient-to-br from-primaryPurple-500 to-primaryPurple-400 flex items-center justify-center flex-col z-20 duration-300 ease-in-out rounded-br rounded-tr md:hidden`}
     >
       <span className="absolute top-10 right-11">
         <img

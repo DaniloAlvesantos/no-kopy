@@ -7,7 +7,7 @@ export const Hero: React.FC = () => {
     AOS.init({ once: true });
   }, []);
   return (
-    <section className="-z-10 bg-gradient-to-tr from-primaryPurple-400 to-primaryPurple-500 w-full h-[100vh] flex justify-items-start lg:items-center justify-center p-4 py-[7rem] md:py-[4rem] lg:py-[6rem] relative">
+    <section className="-z-10 bg-gradient-to-tr from-primaryPurple-400 to-primaryPurple-500 w-full h-[100vh] flex justify-items-start lg:items-center justify-center p-4 py-[6rem] md:py-[4rem] lg:py-[6rem] relative">
       <span>
         <h1
           data-aos="fade-right"
