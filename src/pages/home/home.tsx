@@ -72,10 +72,10 @@ export function Home() {
         <Solution />
         <Skills />
 
-        <div className="w-full flex flex-col items-center justify-center my-4 sm:my-6 md:my-12 lg:my-16 p-4 md:p-8 ">
+        <div className="w-full flex flex-col max-lg:items-center justify-center my-4 sm:my-6 md:my-12 lg:my-16 p-4 sm:p-0">
           <div
             id="contact"
-            className="text-dark-500 bg-primaryPurple-400 rounded-sm sm:bg-transparent sm:rounded-none p-2 flex flex-col text-center sm:text-start items-center sm:items-start justify-center relative"
+            className="text-light-500 bg-primaryPurple-400 rounded-sm sm:rounded-none p-2 sm:p-4 md:p-8 flex flex-col text-center sm:text-start items-center sm:items-start justify-center relative"
           >
             <h2 className="font-poppins font-medium text-xl sm:text-2xl md:text-3xl lg:text-3xl my-2">
               Entre em contato!
@@ -91,7 +91,7 @@ export function Home() {
                 id="name"
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Informe seu nome"
-                className="bg-light-500 w-[15rem] border-2 rounded border-primaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-primaryPurple-500 duration-300 transition-all"
+                className="bg-light-500 w-[15rem] lg:w-[18rem] border-2 rounded border-primaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-primaryPurple-500 duration-300 transition-all"
               />
               <a
                 target="_blank"
@@ -105,11 +105,13 @@ export function Home() {
                 />
               </a>
             </div>
-            <img
-              className="mt-12 w-[18rem] sm:w-[22rem]"
-              src="/contact-us.svg"
-              alt=""
-            />
+            <div className="w-full flex items-center justify-center">
+              <img
+                className="mt-12 w-[18rem] sm:w-[22rem]"
+                src="/contact-us.svg"
+                alt=""
+              />
+            </div>
           </div>
         </div>
 
@@ -117,7 +119,7 @@ export function Home() {
           className="w-full flex flex-col items-center justify-center my-4"
           id="team"
         >
-          <h2 className="m-4 w-11/12 sm:w-[36rem] p-[1.5rem] bg-darkBlue-500 text-light-500 font-poppins font-light rounded text-center">
+          <h2 className="m-4 w-11/12 sm:w-[36rem] p-[1.5rem] bg-secondaryPurple-500 text-light-500 font-poppins font-light rounded text-center">
             Conheça o nosso time
           </h2>
           <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">

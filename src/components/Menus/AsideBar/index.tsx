@@ -25,16 +25,16 @@ export const AsideBarMenu: React.FC<AsideBarMenuProps> = ({
         />
       </span>
       <ul className="w-full gap-4 flex flex-col items-center justify-center text-center">
-        <li className="hover:bg-slate-100 w-full p-2 hover:text-dark-500 text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
+        <li className="hover:bg-primaryPurple-400 w-full p-2 text-light-500 uppercase font-poppins font-normal transition-colors ease-linear">
           <a onClick={() => setMenu(false)} href="#about">Sobre</a>
         </li>
-        <li className="hover:bg-slate-100 w-full p-2 hover:text-dark-500 text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
+        <li className="hover:bg-primaryPurple-400 w-full p-2 text-light-500 uppercase font-poppins font-normal transition-colors ease-linear">
           <a onClick={() => setMenu(false)} href="#team">Nosso Time</a>
         </li>
-        <li className="hover:bg-slate-100 w-full p-2 hover:text-dark-500 text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
+        <li className="hover:bg-primaryPurple-400 w-full p-2 text-light-500 uppercase font-poppins font-normal transition-colors ease-linear">
           <a onClick={() => setMenu(false)} href="#">Projetos</a>
         </li>
-        <li className="hover:bg-slate-100 w-full p-2 hover:text-dark-500 text-light-500 uppercase font-oswald font-light transition-colors ease-linear">
+        <li className="hover:bg-primaryPurple-400 w-full p-2 text-light-500 uppercase font-poppins font-normal transition-colors ease-linear">
           <a onClick={() => setMenu(false)} href="#contact">Contratar</a>
         </li>
       </ul>

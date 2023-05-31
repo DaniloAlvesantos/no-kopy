@@ -34,7 +34,7 @@ export const NavBarMenu: React.FC<NavMenuProps> = ({ setMenu, menu }) => {
         </div>
       </div>
       <ul className="hidden md:flex items-center mr-4">
-        <li className="m-4 text-light-500 uppercase font-poppins bg-primaryPurple-500 py-3 px-6 rounded hover:text-gray-400 hover:bg-primaryPurple-600 transition-colors ease-linear cursor-pointer">
+        <li className="m-4 text-light-500 uppercase font-poppins bg-primaryPurple-400 py-3 px-6 rounded hover:text-gray-400 hover:bg-primaryPurple-500 transition-colors ease-linear cursor-pointer">
           <a tabIndex={0} href="#about">
             Sobre
           </a>

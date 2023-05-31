@@ -37,8 +37,8 @@ export const Skills: React.FC = () => {
       id="skills"
       className="flex flex-col items-center md:items-start justify-center text-dark-500 w-full p-4 lg:grid md:grid-cols-2 relative my-4"
     >
-      <img className="absolute w-[10rem] h-[10rem] -top-[5.5rem] -left-[4rem] blur-sm rotate-90" src="/blob.svg" alt="" />
-      <div className="my-12 md:my-16">
+      <img className="absolute w-[10rem] sm:w-[12rem] h-[10rem] sm:h-[11rem] -top-[5.5rem] lg:-top-[6rem] -left-[4rem] blur-sm rotate-90" src="/blob.svg" alt="" />
+      <div className="my-8 mt-12 sm:mt-16 md:mt-20 lg:my-14">
         <h2
           tabIndex={0}
           className="font-poppins font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl"

@@ -13,7 +13,7 @@ export const Hero: React.FC = () => {
           data-aos="fade-right"
           data-aos-duration="1500"
           data-aos-easing="ease-in-out"
-          className="font-poppins font-bold text-center text-lg md:text-2xl lg:text-3xl my-4 md:my-12 text-light-500"
+          className="font-poppins font-bold text-center text-[17px] md:text-2xl lg:text-3xl my-4 md:my-12 text-light-500"
         >
           No Copy agência que irá impulcionar seus négocios
         </h1>
@@ -21,7 +21,7 @@ export const Hero: React.FC = () => {
           data-aos="fade-left"
           data-aos-duration="1700"
           data-aos-easing="ease-in-out"
-          className="font-poppins font-light text-center text-[14px] sm:text-base md:text-lg my-4 md:my-12 text-light-500"
+          className="font-poppins font-light text-center text-sm sm:text-base md:text-lg my-4 md:my-12 text-light-500"
         >
           Somos uma agência formada por freelancers experientes, que oferece um
           atendimento personalizado e exclusivo.Relatórios semanais, projeção de
