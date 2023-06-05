@@ -11,7 +11,7 @@ export const Solution: React.FC = () => {
   return (
     <section
       id="solution"
-      className="relative w-full flex flex-col-reverse gap-4 lg:flex-row p-4 sm:p-8 md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center my-4 md:my-8 lg:my-12"
+      className="relative w-full flex flex-col-reverse gap-4 lg:flex-row p-4 sm:p-8 md:p-12 lg:p-4 lg:flex-1 lg:gap-8 items-center justify-center my-4 md:my-8 lg:my-20"
     >
       <div className="m-4">
         <img

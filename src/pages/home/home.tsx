@@ -6,7 +6,6 @@ import { Footer } from "../../components/Footer";
 import { Solution } from "./components/Solution";
 import { Button } from "../../components/Buttons";
 import { TeamComponent } from "../../components/Team";
-import { PrimaryCard } from "../../components/cards/card-primary";
 
 const teamInfo = [
   {
@@ -14,7 +13,7 @@ const teamInfo = [
     name: "Danilo Alves",
     career: "Desenvolvedor",
     xp: 3,
-    type: "Front-end",
+    type: "FrontEnd",
     instagramUrl: "https://www.instagram.com/danilodos9818/",
     altImage: "Integrante Danilo",
     urlImage: "https://i.ibb.co/ft13q0h/1.png",
@@ -45,7 +44,7 @@ const teamInfo = [
     career: "Social Media",
     xp: 3,
     type: "Instagram",
-    instagramUrl: "https://www.instagram.com/odrielmatos_nocopy/",
+    instagramUrl: "https://www.instagram.com/gustavobenegasoficial/",
     altImage: "Integrant Gustavo",
     urlImage: "https://i.ibb.co/fp7GN6y/3.png",
   },
@@ -55,7 +54,7 @@ const teamInfo = [
     career: "Gestor de Tráfego Pago",
     xp: 2,
     type: "Adsense",
-    instagramUrl: "https://www.instagram.com/odrielmatos_nocopy/",
+    instagramUrl: "https://www.instagram.com/gabriel_fariasbr/",
     altImage: "Integrant Gabriel",
     urlImage: "https://i.ibb.co/b3pQBnG/2.png",
   },
@@ -72,10 +71,10 @@ export function Home() {
         <Solution />
         <Skills />
 
-        <div className="w-full flex flex-col max-lg:items-center justify-center my-4 sm:my-6 md:my-12 lg:my-16 p-4 sm:p-0">
+        <div className="w-full flex flex-col max-lg:items-center justify-center my-4 sm:my-6 md:my-12 lg:my-16 lg:p-4 p-4 sm:p-0">
           <div
             id="contact"
-            className="text-light-500 bg-primaryPurple-400 rounded-sm sm:rounded-none p-2 sm:p-4 md:p-8 flex flex-col text-center sm:text-start items-center sm:items-start justify-center relative"
+            className="text-light-500 bg-primaryPurple-400 rounded-sm lg:rounded-sm sm:rounded-none p-2 sm:p-4 md:p-8 flex flex-col text-center sm:text-start items-center sm:items-start justify-center relative"
           >
             <h2 className="font-poppins font-medium text-xl sm:text-2xl md:text-3xl lg:text-3xl my-2">
               Entre em contato!
@@ -116,7 +115,7 @@ export function Home() {
         </div>
 
         <div
-          className="w-full flex flex-col items-center justify-center my-4"
+          className="w-full flex flex-col items-center justify-center my-4 relativenpm run dev"
           id="team"
         >
           <h2 className="m-4 w-11/12 sm:w-[36rem] p-[1.5rem] bg-secondaryPurple-500 text-light-500 font-poppins font-light rounded text-center">
