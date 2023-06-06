@@ -6,8 +6,8 @@ import { Footer } from "../../components/Footer";
 import { Solution } from "./components/Solution";
 import { Button } from "../../components/Buttons";
 import { TeamComponent } from "../../components/Team";
-import { gsap } from "gsap-trial";
-import { ScrollSmoother, ScrollTrigger } from "gsap-trial/all";
+import { gsap } from "gsap";
+import { ScrollSmoother, ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
