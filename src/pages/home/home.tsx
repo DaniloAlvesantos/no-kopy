@@ -1,4 +1,4 @@
-import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
+import React, { useState } from "react";
 import { Hero } from "./components/hero";
 import { Skills } from "./components/skills";
 import { Headers } from "../../components/Menus";
@@ -6,10 +6,6 @@ import { Footer } from "../../components/Footer";
 import { Solution } from "./components/Solution";
 import { Button } from "../../components/Buttons";
 import { TeamComponent } from "../../components/Team";
-import { gsap } from "gsap";
-import { ScrollSmoother, ScrollTrigger } from "gsap/all";
-
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const teamInfo = [
   {
@@ -66,20 +62,9 @@ const teamInfo = [
 
 export function Home() {
   const [name, setName] = useState<string>();
-  // const smoother = useRef();
-
-  useEffect(() => {
-    const smoother = ScrollSmoother.create({
-      wrapper: "#wrapper-container",
-      content: "#content-container",
-      smooth: 2,
-      effects: true,
-    });
-  }, []);
 
   return (
-    <div id="wrapper-container" className="overflow-hidden relative">
-      <div id="content-container">
+    <div className="overflow-hidden relative">
         <Headers />
         <Hero />
         <main className="flex flex-col items-center justify-center w-full">
@@ -154,7 +139,6 @@ export function Home() {
           </div>
         </main>
         <Footer />
-      </div>
     </div>
   );
 }
