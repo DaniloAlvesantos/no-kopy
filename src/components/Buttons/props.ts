@@ -1,10 +1,9 @@
 export interface ButtonProps {
   text: string;
-  primary: boolean;
-  img?: React.ReactElement;
-  color?: "purple" | "second-purple" | "white" | "darkblue";
   margin?: string;
+  primary: boolean;
   hoverTextDark?: boolean;
-  onClick:(e: React.MouseEvent<HTMLElement>) => void;
+  img?: React.ReactElement;
+  onClick: (e: React.MouseEvent<HTMLElement>) => void;
+  color?: "purple" | "second-purple" | "white" | "darkblue";
 }
-

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useLayoutEffect, useEffect } from "react";
 import { Hero } from "./components/hero";
 import { Skills } from "./components/skills";
 import { Headers } from "../../components/Menus";
@@ -6,6 +6,10 @@ import { Footer } from "../../components/Footer";
 import { Solution } from "./components/Solution";
 import { Button } from "../../components/Buttons";
 import { TeamComponent } from "../../components/Team";
+import { gsap } from "gsap-trial";
+import { ScrollSmoother, ScrollTrigger } from "gsap-trial/all";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const teamInfo = [
   {
@@ -62,83 +66,95 @@ const teamInfo = [
 
 export function Home() {
   const [name, setName] = useState<string>();
+  // const smoother = useRef();
+
+  useEffect(() => {
+    const smoother = ScrollSmoother.create({
+      wrapper: "#wrapper-container",
+      content: "#content-container",
+      smooth: 2,
+      effects: true,
+    });
+  }, []);
 
   return (
-    <div className="overflow-hidden">
-      <Headers />
-      <Hero />
-      <main className="flex flex-col items-center justify-center w-full">
-        <Solution />
-        <Skills />
+    <div id="wrapper-container" className="overflow-hidden relative">
+      <div id="content-container">
+        <Headers />
+        <Hero />
+        <main className="flex flex-col items-center justify-center w-full">
+          <Solution />
+          <Skills />
 
-        <div className="w-full flex flex-col max-lg:items-center justify-center my-4 sm:my-6 md:my-12 lg:my-16 lg:p-4 p-4 sm:p-0">
-          <div
-            id="contact"
-            className="text-light-500 bg-primaryPurple-400 rounded-sm lg:rounded-sm sm:rounded-none p-2 sm:p-4 md:p-8 flex flex-col text-center sm:text-start items-center sm:items-start justify-center relative"
-          >
-            <h2 className="font-poppins font-medium text-xl sm:text-2xl md:text-3xl lg:text-3xl my-2">
-              Entre em contato!
-            </h2>
-            <p className="font-poppins font-normal text-[15px] sm:text-base md:text-xl lg:text-xl my-2 md:w-11/12">
-              Pedimos que você informe seu nome, para estar sendo direcionado a
-              nosso whatsapp, para estar entrando em contato e fechando
-              orçamentos.
-            </p>
-            <div className="flex flex-col items-start justify-center">
-              <input
-                type="text"
-                id="name"
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Informe seu nome"
-                className="bg-light-500 w-[15rem] lg:w-[18rem] border-2 rounded border-primaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-primaryPurple-500 duration-300 transition-all"
-              />
-              <a
-                target="_blank"
-                href={`https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? me chamo ${name}, vim conversar sobre négocios.`}
-              >
-                <Button
-                  onClick={() => null}
-                  text="Enviar"
-                  color="purple"
-                  primary={true}
+          <div className="w-full flex flex-col max-lg:items-center justify-center my-4 sm:my-6 md:my-12 lg:my-16 lg:p-4 p-4 sm:p-0">
+            <div
+              id="contact"
+              className="text-light-500 bg-primaryPurple-400 rounded-sm lg:rounded-sm sm:rounded-none p-2 sm:p-4 md:p-8 flex flex-col text-center sm:text-start items-center sm:items-start justify-center relative"
+            >
+              <h2 className="font-poppins font-medium text-xl sm:text-2xl md:text-3xl lg:text-3xl my-2">
+                Entre em contato!
+              </h2>
+              <p className="font-poppins font-normal text-[15px] sm:text-base md:text-xl lg:text-xl my-2 md:w-11/12">
+                Pedimos que você informe seu nome, para estar sendo direcionado
+                a nosso whatsapp, para estar entrando em contato e fechando
+                orçamentos.
+              </p>
+              <div className="flex flex-col items-start justify-center">
+                <input
+                  type="text"
+                  id="name"
+                  onChange={(e) => setName(e.target.value)}
+                  placeholder="Informe seu nome"
+                  className="bg-light-500 w-[15rem] lg:w-[18rem] border-2 rounded border-primaryPurple-500 my-4 p-2 font-poppins outline-none focus:rounded focus:ring-4 focus:ring-primaryPurple-500 duration-300 transition-all"
                 />
-              </a>
-            </div>
-            <div className="w-full flex items-center justify-center">
-              <img
-                className="mt-12 w-[18rem] sm:w-[22rem]"
-                src="/contact-us.svg"
-                alt=""
-              />
+                <a
+                  target="_blank"
+                  href={`https://api.whatsapp.com/send?1=pt_BR&phone=5519994337262&text=Olá Gustavo, tudo bem ? me chamo ${name}, vim conversar sobre négocios.`}
+                >
+                  <Button
+                    onClick={() => null}
+                    text="Enviar"
+                    color="purple"
+                    primary={true}
+                  />
+                </a>
+              </div>
+              <div className="w-full flex items-center justify-center">
+                <img
+                  className="mt-12 w-[18rem] sm:w-[22rem]"
+                  src="/contact-us.svg"
+                  alt=""
+                />
+              </div>
             </div>
           </div>
-        </div>
 
-        <div
-          className="w-full flex flex-col items-center justify-center my-4 relativenpm run dev"
-          id="team"
-        >
-          <h2 className="m-4 w-11/12 sm:w-[36rem] p-[1.5rem] bg-secondaryPurple-500 text-light-500 font-poppins font-light rounded text-center">
-            Conheça o nosso time
-          </h2>
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
-            {teamInfo.map((info) => (
-              <TeamComponent
-                key={info.id}
-                id={info.id}
-                name={info.name}
-                career={info.career}
-                xp={info.xp}
-                type={info.type}
-                instagramUrl={info.instagramUrl}
-                altImage={info.altImage}
-                urlImage={info.urlImage}
-              />
-            ))}
+          <div
+            className="w-full flex flex-col items-center justify-center my-4 relativenpm run dev"
+            id="team"
+          >
+            <h2 className="m-4 w-11/12 sm:w-[36rem] p-[1.5rem] bg-secondaryPurple-500 text-light-500 font-poppins font-light rounded text-center">
+              Conheça o nosso time
+            </h2>
+            <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+              {teamInfo.map((info) => (
+                <TeamComponent
+                  key={info.id}
+                  id={info.id}
+                  name={info.name}
+                  career={info.career}
+                  xp={info.xp}
+                  type={info.type}
+                  instagramUrl={info.instagramUrl}
+                  altImage={info.altImage}
+                  urlImage={info.urlImage}
+                />
+              ))}
+            </div>
           </div>
-        </div>
-      </main>
-      <Footer />
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 }
