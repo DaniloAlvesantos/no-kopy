@@ -17,13 +17,6 @@ module.exports = {
           500: "#04052E",
           400: "#282B81",
         },
-        primaryBlue: {
-          900: "#03004E",
-          800: "#05005F",
-          700: "#070076",
-          600: "#0A008D",
-          500: "#0D00A4",
-        },
         secondaryPurple: {
           900: "#050027",
           800: "#07002F",
@@ -46,10 +39,9 @@ module.exports = {
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
+        Montserrat: ["Montserrat", "sans-serif"],
       },
-      backgroundImage: {
-       
-      },
+      backgroundImage: {},
       boxShadow: {
         cardShadow: "1px 2px 10px 1px #12121250",
         cardShadow_sm: "1px 2px 8px #12121250",
