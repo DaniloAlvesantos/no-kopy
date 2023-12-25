@@ -1,7 +1,5 @@
 import { LightbulbFilament, Lightning, Monitor } from "@phosphor-icons/react";
 import * as React from "react";
-import "aos/dist/aos.css";
-import AOS from "aos";
 
 const skils = [
   {
@@ -28,10 +26,6 @@ const skils = [
 ];
 
 export const Skills: React.FC = () => {
-  React.useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
-
   return (
     <section
       id="skills"

@@ -1,12 +1,7 @@
 import * as React from "react";
 import { Button } from "../../../components/Buttons";
-import "aos/dist/aos.css";
-import AOS from "aos";
 
 export const Solution: React.FC = () => {
-  React.useEffect(() => {
-    AOS.init({ once: true });
-  }, []);
 
   return (
     <section
