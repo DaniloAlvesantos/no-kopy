@@ -33,8 +33,14 @@ module.exports = {
           500: "#22007C",
           400: "#542CB0",
         },
+        primaryGreen: {
+          100:"#A2F2CD",
+          300:"#05F26C",
+          500:"#04BF55",
+          700:"#01401C",
+        },
         light: {
-          500: "#FFFBFE",
+          500: "#f7f7f2",
         },
       },
       fontFamily: {

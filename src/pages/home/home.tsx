@@ -13,9 +13,8 @@ const teamInfo = [
     name: "Danilo Alves",
     career: "Desenvolvedor",
     xp: 3,
-    type: "FrontEnd",
     instagramUrl: "https://www.instagram.com/danilodos9818/",
-    altImage: "Integrante Danilo",
+    background: "Integrante Danilo",
     urlImage: "https://i.ibb.co/ft13q0h/1.png",
   },
   {
@@ -23,9 +22,8 @@ const teamInfo = [
     name: "Israel Buchi",
     career: "Designer",
     xp: 2,
-    type: "Grafico",
     instagramUrl: "https://www.instagram.com/israelbdesigner/",
-    altImage: "Integrante Israel",
+    background: "Integrante Israel",
     urlImage: "https://i.ibb.co/s6T9J2C/5.png",
   },
   {
@@ -33,9 +31,8 @@ const teamInfo = [
     name: "Odriel Matos",
     career: "Gestor Administrativo",
     xp: 4,
-    type: "ADM",
     instagramUrl: "https://www.instagram.com/odrielmatos_nocopy/",
-    altImage: "Integrant Odriel",
+    background: "Integrant Odriel",
     urlImage: "https://i.ibb.co/j6DR3XY/4.png",
   },
   {
@@ -43,9 +40,8 @@ const teamInfo = [
     name: "Gustavo Matos",
     career: "Social Media",
     xp: 3,
-    type: "Instagram",
     instagramUrl: "https://www.instagram.com/gustavobenegasoficial/",
-    altImage: "Integrant Gustavo",
+    background: "Integrant Gustavo",
     urlImage: "https://i.ibb.co/fp7GN6y/3.png",
   },
   {
@@ -53,9 +49,8 @@ const teamInfo = [
     name: "Gabriel Farias",
     career: "Gestor de Tráfego Pago",
     xp: 2,
-    type: "Adsense",
     instagramUrl: "https://www.instagram.com/gabriel_fariasbr/",
-    altImage: "Integrant Gabriel",
+    background: "Integrant Gabriel",
     urlImage: "https://i.ibb.co/b3pQBnG/2.png",
   },
 ];
@@ -129,9 +124,8 @@ export function Home() {
                   name={info.name}
                   career={info.career}
                   xp={info.xp}
-                  type={info.type}
                   instagramUrl={info.instagramUrl}
-                  altImage={info.altImage}
+                  background={info.background}
                   urlImage={info.urlImage}
                 />
               ))}
