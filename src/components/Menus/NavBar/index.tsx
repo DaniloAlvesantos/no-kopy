@@ -9,7 +9,7 @@ interface NavMenuProps {
 export const NavBarMenu: React.FC<NavMenuProps> = ({ setMenu, menu }) => {
   return (
     <nav
-      className={`bg-transparent absolute top-0 w-full h-[5.125rem] flex items-center justify-between`}
+      className={`bg-transparent absolute top-0 w-full  flex items-center justify-between`}
     >
       <div>
         <img
@@ -24,12 +24,12 @@ export const NavBarMenu: React.FC<NavMenuProps> = ({ setMenu, menu }) => {
           onClick={() => setMenu(!menu)}
           className={`${
             menu && "rotate-180"
-          } duration-150 transition ease-out w-12 h-12 text-light-500 object-fill`}
+          } duration-150 transition ease-out w-10 h-10 text-light-500 object-fill`}
         >
           {menu ? (
-            <X tabIndex={0} className="w-12 h-12" />
+            <X tabIndex={0} className="w-10 h-10" />
           ) : (
-            <List tabIndex={0} className="w-12 h-12" />
+            <List tabIndex={0} className="w-10 h-10" />
           )}
         </div>
       </div>

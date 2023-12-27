@@ -1,4 +1,3 @@
-import { TeamComponent } from "./components/Team";
 import { Home } from "./pages/home/home";
 
 function App() {

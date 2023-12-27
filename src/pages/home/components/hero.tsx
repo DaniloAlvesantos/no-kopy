@@ -2,26 +2,22 @@ import * as React from "react";
 
 export const Hero: React.FC = () => {
   return (
-    <section className="-z-10 bg-gradient-to-tr from-primaryPurple-400 to-primaryPurple-500 w-full h-[100vh] flex justify-items-start lg:items-center justify-center p-4 py-[5rem] md:py-[4rem] lg:py-[6rem] relative">
+    <section className="-z-10 bg-gradient-to-tr from-dark-700 to-primaryGreen-500 w-full h-[100vh] flex items-center justify-center text-center flex-col p-4 pt-24 relative font-Montserrat text-light-500 gap-8">
       <span>
-        <h1
-          className="font-Montserrat font-bold text-center text-[17px] md:text-2xl lg:text-3xl my-4 md:my-12 text-light-500"
-        >
-          No Copy agência que irá impulcionar seus négocios
+        <h1 className="font-bold text-lg my-4">
+          Agência que irá impulcionar seus négocios!
         </h1>
-        <h2
-          className="font-Montserrat font-light text-center text-sm sm:text-base md:text-lg my-4 md:my-12 text-light-500"
-        >
-          Somos uma agência formada por freelancers experientes, que oferece um
-          atendimento personalizado e exclusivo.Relatórios semanais, projeção de
-          estratégias e projetos.
+        <h2 className="font-light text-center text-xs sm:text-base">
+          Agência experiente oferece estratégias personalizadas para impulsionar
+          seu negócio, proporcionando resultados excepcionais para elevar sua
+          marca ao próximo nível.
         </h2>
       </span>
-        <img
-          src="rocket.svg"
-          alt=""
-          className="w-[22rem] h-[18rem] sm:h-[20rem] lg:w-full lg:h-full object-fill"
-        />
+      <img
+        src="rocket.svg"
+        alt=""
+        className="w-[15rem] h-[15rem] object-fill"
+      />
     </section>
   );
 };
