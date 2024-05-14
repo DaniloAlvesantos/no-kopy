@@ -170,7 +170,7 @@ export const Form: React.FC = () => {
                   <FormComp.FormLabel>Digite seu {checked}</FormComp.FormLabel>
                   <FormComp.FormControl>
                     <InputMask
-                      alwaysShowMask
+                      placeholder={`Digite ${checked}`}
                       mask={
                         checked === "CPF"
                           ? "999.999.999-99"
@@ -205,11 +205,16 @@ export const Form: React.FC = () => {
                     <FormComp.FormControl>
                       <Input
                         type="time"
+                        min="06:00"
+                        max="19:00"
                         placeholder="Escolha a hora da sua reunião"
                         className="focus-visible:ring-green-500 cursor-pointer justify-center items-center lg:px-[7.8rem]"
                         {...field}
                       />
                     </FormComp.FormControl>
+                    <FormComp.FormDescription>
+                      Melhore sua experiência clicando no icone de "relógio".
+                    </FormComp.FormDescription>
                     <FormComp.FormMessage />
                   </FormComp.FormItem>
                 )}
