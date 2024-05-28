@@ -17,14 +17,14 @@ const FormSchema = z.object({
   name: z.string().min(5),
   email: z.string().email({ message: "Invalid email." }),
   instagram: z.string(),
-  hour:z.string()
+  hour: z.string(),
 });
 
-type FormPropsSchema = z.infer<typeof FormSchema>
+type FormPropsSchema = z.infer<typeof FormSchema>;
 
 export const Form: React.FC = () => {
   const form = useForm<FormPropsSchema>({
-    resolver:zodResolver(FormSchema)
+    resolver: zodResolver(FormSchema),
   });
   const [date, setDate] = useState<string>();
   const [checked, setChecked] = useState("CPF");
@@ -45,7 +45,8 @@ export const Form: React.FC = () => {
       >
         <div>
           <div className="flex flex-col gap-4 my-2">
-            <label className="flex flex-col items-center justify-center rounded-md py-4 relative has-[:checked]:border-green-500 border-2 cursor-pointer transition-all duration-500 ease hover:bg-zinc-500 has-[:checked]:hover:bg-transparent lg:w-80">
+            <label className="my-2 font-montserrat flex flex-col items-center justify-center rounded-md py-6 relative has-[:checked]:border-green-500 border-2 cursor-pointer transition-all duration-500 ease hover:bg-zinc-500 has-[:checked]:hover:bg-transparent lg:w-80">
+              CPF
               <input
                 checked={checked === "CPF"}
                 type="radio"
@@ -54,7 +55,6 @@ export const Form: React.FC = () => {
                 className="peer sr-only"
               />
               <User className="w-7 h-7 absolute left-1.5 top-1.5 bg-zinc-500 peer-checked:bg-green-500 rounded-full p-1" />
-              <label className="my-2 font-montserrat">CPF</label>
               <p
                 className={`text-[11px] w-[50%] text-center leading-3 text-zinc-400 font-inter`}
               >
@@ -62,16 +62,16 @@ export const Form: React.FC = () => {
               </p>
             </label>
 
-            <label className="flex flex-col items-center justify-center rounded-md py-4 relative has-[:checked]:border-green-500 border-2 cursor-pointer transition-all duration-500 ease hover:bg-zinc-500 has-[:checked]:hover:bg-transparent lg:w-80">
+            <label className="font-montserrat flex flex-col items-center justify-center rounded-md py-6 relative has-[:checked]:border-green-500 border-2 cursor-pointer transition-all duration-500 ease hover:bg-zinc-500 has-[:checked]:hover:bg-transparent lg:w-80">
+              CNPJ
               <input
-                checked={checked === "CNPJ"}
                 type="radio"
                 value="CNPJ"
                 onChange={handleCheck}
                 className="peer sr-only"
+                checked={checked === "CNPJ"}
               />
               <Building className="w-7 h-7 absolute left-1.5 top-1.5 bg-zinc-500 peer-checked:bg-green-500 rounded-full p-1" />
-              <label className="my-2 font-montserrat">CNPJ</label>
               <p
                 className={`text-[11px] w-[50%] text-center leading-3 text-zinc-400 font-inter`}
               >
@@ -140,9 +140,7 @@ export const Form: React.FC = () => {
               name="email"
               render={({ field }) => (
                 <FormComp.FormItem>
-                  <FormComp.FormLabel>
-                    Informe o seu email
-                  </FormComp.FormLabel>
+                  <FormComp.FormLabel>Informe o seu email</FormComp.FormLabel>
                   <FormComp.FormControl>
                     <Input
                       type="email"
