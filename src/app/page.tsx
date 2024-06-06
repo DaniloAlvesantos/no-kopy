@@ -1,11 +1,7 @@
-"use client"
+"use client";
 
-import { Form } from "@/components/ux/Form";
+import { LandingPage } from "./landingPage";
 
 export default function Home() {
-  return (
-    <>
-      <Form />
-    </>
-  );
+  return <LandingPage />
 }

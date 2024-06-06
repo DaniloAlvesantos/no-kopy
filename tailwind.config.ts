@@ -1,13 +1,13 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -52,6 +52,21 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        NKGreen: {
+          300: "#05F26C",
+          400: "#39D86E",
+          500: "#04BF55",
+          700: "#01401C",
+        },
+        NKCian: {
+          400: "#A2F2CD",
+        },
+        NKWhite: {
+          500: "#F7F7F2",
+        },
+        NKBlack: {
+          500: "#0D0D0D",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -71,14 +86,14 @@ const config = {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-      }, 
+      },
       fontFamily: {
-        "montserrat":"__Montserrat_b1da2a",
-        "inter":"__Inter_aaf875"
-      }
+        montserrat: ["var(--font-montserrat)", "sans-serif"],
+        firaSans: ["var(--font-fira-sans)", "sans-serif"],
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
-} satisfies Config
+} satisfies Config;
 
-export default config
+export default config;

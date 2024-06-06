@@ -1,4 +1,4 @@
-import { Form } from "@/components/ux/Form";
+import { Form } from "@/components/form";
 
 export function FormPage() {
     return (

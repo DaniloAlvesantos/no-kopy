@@ -45,7 +45,7 @@ export const Form: React.FC = () => {
       >
         <div>
           <div className="flex flex-col gap-4 my-2">
-            <label className="my-2 font-montserrat flex flex-col items-center justify-center rounded-md py-6 relative has-[:checked]:border-green-500 border-2 cursor-pointer transition-all duration-500 ease hover:bg-zinc-500 has-[:checked]:hover:bg-transparent lg:w-80">
+            <label className="my-2 font-montserrat flex flex-col items-center justify-center rounded-md py-6 relative has-[:checked]:border-green-500 border-2 cursor-pointer transition-all duration-500 ease hover:bg-zinc-500 has-[:checked]:hover:bg-transparent w-72 lg:w-80">
               CPF
               <input
                 checked={checked === "CPF"}
@@ -56,13 +56,13 @@ export const Form: React.FC = () => {
               />
               <User className="w-7 h-7 absolute left-1.5 top-1.5 bg-zinc-500 peer-checked:bg-green-500 rounded-full p-1" />
               <p
-                className={`text-[11px] w-[50%] text-center leading-3 text-zinc-400 font-inter`}
+                className={`text-[11px] w-[50%] text-center leading-3 text-zinc-400 font-firaSans`}
               >
                 Se você é uma pessoa física, utilize seu CPF.
               </p>
             </label>
 
-            <label className="font-montserrat flex flex-col items-center justify-center rounded-md py-6 relative has-[:checked]:border-green-500 border-2 cursor-pointer transition-all duration-500 ease hover:bg-zinc-500 has-[:checked]:hover:bg-transparent lg:w-80">
+            <label className="font-montserrat flex flex-col items-center justify-center rounded-md py-6 relative has-[:checked]:border-green-500 border-2 cursor-pointer transition-all duration-500 ease hover:bg-zinc-500 has-[:checked]:hover:bg-transparent w-72 lg:w-80">
               CNPJ
               <input
                 type="radio"
@@ -73,7 +73,7 @@ export const Form: React.FC = () => {
               />
               <Building className="w-7 h-7 absolute left-1.5 top-1.5 bg-zinc-500 peer-checked:bg-green-500 rounded-full p-1" />
               <p
-                className={`text-[11px] w-[50%] text-center leading-3 text-zinc-400 font-inter`}
+                className={`text-[11px] w-[50%] text-center leading-3 text-zinc-400 font-firaSans`}
               >
                 Se você tem empresa, ou é uma empresa. Utilize o CNPJ
               </p>
