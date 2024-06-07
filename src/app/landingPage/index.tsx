@@ -35,10 +35,11 @@ export function LandingPage() {
         autoPlay
         loop
         playsInline
+        muted
         className="absolute -z-20 w-auto min-w-full min-h-full max-w-none"
       >
         <source
-          src="https://19943411.fs1.hubspotusercontent-na1.net/hubfs/19943411/Banner_Site_Cubo-1.mp4"
+          src="/1.mp4"
           type="video/mp4"
         />
       </video>
