@@ -9,24 +9,6 @@ const Navigation: NavigationType[] = [
   { title: "Agendar", href: "#book" },
 ];
 
-const Video = () => {
-  return (
-    <>
-      <span className="bg-NKBlack-500 opacity-50 absolute inset-0 -z-10" />
-      <video
-        autoPlay
-        loop
-        muted
-        controls={false}
-        className="absolute -z-20 w-auto min-w-full min-h-full max-w-none"
-      >
-        {/* <source media="(min-width: 800px)" src="" type="video/mp4" /> */}
-        <source src="https://19943411.fs1.hubspotusercontent-na1.net/hubfs/19943411/Banner_Site_Cubo-1.mp4" type="video/mp4" />
-      </video>
-    </>
-  );
-};
-
 export function LandingPage() {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
@@ -48,7 +30,20 @@ export function LandingPage() {
         </Button>
       </main>
 
-      <Video />
+      <span className="bg-NKBlack-500 opacity-50 absolute inset-0 -z-10" />
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute -z-20 w-auto min-w-full min-h-full max-w-none"
+      >
+        {/* <source media="(min-width: 800px)" src="" type="video/mp4" /> */}
+        <source
+          src="https://19943411.fs1.hubspotusercontent-na1.net/hubfs/19943411/Banner_Site_Cubo-1.mp4"
+          type="video/mp4"
+        />
+      </video>
     </section>
   );
 }
