@@ -8,7 +8,6 @@ import Image from "next/image";
 
 export const Header: React.FC<MenuProps> = ({ navigation }) => {
   const [show, setShow] = useState<boolean>(false);
-
   const handleShow = useCallback(() => {
     setShow((prev) => !prev);
   }, []);
