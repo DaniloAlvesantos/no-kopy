@@ -13,12 +13,12 @@ export const Header: React.FC<MenuProps> = ({ navigation }) => {
   }, []);
 
   return (
-    <header className="fixed top-0 w-full">
+    <header className="fixed top-0 w-full z-10">
       <nav className="w-full flex items-center justify-between md:justify-center relative p-2 md:px-2 md:py-5">
         <Image
           width={48}
           height={48}
-          src="/Logo-1.PNG"
+          src="/LOGO-1.png"
           className="object-contain md:absolute md:left-4 md:top-2"
           alt="Logo"
         />
@@ -40,6 +40,7 @@ export const Header: React.FC<MenuProps> = ({ navigation }) => {
             onClick={handleShow}
           />
         )}
+        
         <AnimatePresence mode="wait" initial={false}>
           {show && <AsideMenu navigation={navigation} />}
         </AnimatePresence>
