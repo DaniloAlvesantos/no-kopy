@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { MenuProps } from "../main";
 import { motion } from "framer-motion";

@@ -1,0 +1,29 @@
+{
+  "menuLandingPage": {
+    "0": { "title": "sobre", "href": "#about" },
+    "1": { "title": "serviços", "href": "#services" },
+    "2": { "title": "contato", "href": "#contact" },
+    "3": { "title": "agendar", "href": "#book" }
+  },
+  "hero": {
+    "title": "Agência que irá impulcionar seus négocios",
+    "description": "Nossa agência experiente impulsionará seu negócio com estratégias personalizadas e resultados excepcionais. Confie em nossa equipe para elevar sua marca ao próximo nível.",
+    "button-text": "faça parte"
+  },
+  "about": {
+    "title": "Quem nos <strong>somos ? </strong>",
+    "description": {
+      "0": "Somos uma empresa de marketing digital, com a dedicação em destacar sua marca no meio digital. Com estratégias somado com nossa equipe profissional, geramos resultados imediatos em sua marca.",
+      "1": "Nosso trabalho é fazer você e sua empresa impactar a concorrência, com qualidade em audiovisual, estratégias, gatilhos, etc.",
+      "2": "Não fique de fora, agende uma reunião com nossa equipe agora mesmo!"
+    }
+  },
+  "questions": [
+    "Quer acelerar sua presença digital",
+    "Você deseja gerar mais leads com melhor preço",
+    "Você quer turbinar sua receita de comércio eletrônico",
+    "Você quer disparar seu pipeline de vendas",
+    "Você quer aumentar suas vendas internacionalmente",
+    "Você quer lançar sua marca do zero"
+  ]
+}

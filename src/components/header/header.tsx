@@ -1,10 +1,13 @@
-import { PiList, PiX } from "react-icons/pi";
+"use client";
+
+import Image from "next/image";
 import { MenuProps } from "./main";
 import { AsideMenu } from "./ui/aside";
-import { ListComponent } from "./ui/li.component";
+import { PiList, PiX } from "react-icons/pi";
 import { useCallback, useState } from "react";
 import { AnimatePresence } from "framer-motion";
-import Image from "next/image";
+import { ListComponent } from "./ui/li.component";
+import { LocaleSwitch } from "../localeSwitch/localeSwitch";
 
 export const Header: React.FC<MenuProps> = ({ navigation }) => {
   const [show, setShow] = useState<boolean>(false);
@@ -12,14 +15,15 @@ export const Header: React.FC<MenuProps> = ({ navigation }) => {
     setShow((prev) => !prev);
   }, []);
 
+  console.count("menu");
   return (
     <header className="fixed top-0 w-full z-10">
-      <nav className="w-full flex items-center justify-between md:justify-center relative p-2 md:px-2 md:py-5">
+      <nav className="w-full flex items-center justify-between relative p-2 md:px-2 md:py-5">
         <Image
           width={48}
           height={48}
           src="/LOGO-1.png"
-          className="object-contain md:absolute md:left-4 md:top-2"
+          className="object-contain"
           alt="Logo"
         />
 
@@ -28,6 +32,8 @@ export const Header: React.FC<MenuProps> = ({ navigation }) => {
             <ListComponent key={index} item={item} />
           ))}
         </ul>
+
+        <LocaleSwitch />
 
         {show ? (
           <PiX
@@ -40,7 +46,7 @@ export const Header: React.FC<MenuProps> = ({ navigation }) => {
             onClick={handleShow}
           />
         )}
-        
+
         <AnimatePresence mode="wait" initial={false}>
           {show && <AsideMenu navigation={navigation} />}
         </AnimatePresence>

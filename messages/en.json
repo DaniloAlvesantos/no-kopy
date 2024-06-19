@@ -1,0 +1,29 @@
+{
+  "menuLandingPage": {
+    "0": { "title": "about", "href": "#about" },
+    "1": { "title": "services", "href": "#services" },
+    "2": { "title": "contact", "href": "#contact" },
+    "3": { "title": "book", "href": "#book" }
+  },
+  "hero": {
+    "title": "Agency that will boost your business",
+    "description": "Our experienced agency will boost your business with personalized strategies and exceptional results. Trust our team to elevate your brand to the next level.",
+    "button-text": "join us"
+  },
+  "about": {
+    "title": "Who are <strong>we?</strong>",
+    "description": {
+      "0": "We are a digital marketing company dedicated to highlighting your brand in the digital space. With strategies combined with our professional team, we generate immediate results for your brand.",
+      "1": "Our job is to make you and your company impact the competition with quality audiovisual, strategies, triggers, etc.",
+      "2": "Don't miss out, schedule a meeting with our team right now!"
+    }
+  },
+  "questions": [
+    "Do you want to accelerate your digital presence",
+    "Do you want to generate more leads at a better price",
+    "Do you want to boost your e-commerce revenue",
+    "Do you want to explode your sales pipeline",
+    "Do you want to increase your international sales",
+    "Do you want to launch your brand from scratch"
+  ]
+}
