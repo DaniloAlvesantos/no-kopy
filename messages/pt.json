@@ -18,12 +18,16 @@
       "2": "Não fique de fora, agende uma reunião com nossa equipe agora mesmo!"
     }
   },
-  "questions": [
-    "Quer acelerar sua presença digital",
-    "Você deseja gerar mais leads com melhor preço",
-    "Você quer turbinar sua receita de comércio eletrônico",
-    "Você quer disparar seu pipeline de vendas",
-    "Você quer aumentar suas vendas internacionalmente",
-    "Você quer lançar sua marca do zero"
-  ]
+  "questions": {
+    "title": "De publicidade para <strong>lucro</strong>",
+    "hook": "nos fazemos isso para você!",
+    "text": {
+      "0": "Quer acelerar sua presença digital",
+      "1": "Você deseja gerar mais leads com melhor preço",
+      "2": "Você quer turbinar sua receita de comércio eletrônico",
+      "3": "Você quer disparar seu pipeline de vendas",
+      "4": "Você quer aumentar suas vendas internacionalmente",
+      "5": "Você quer lançar sua marca do zero"
+    }
+  }
 }

@@ -15,10 +15,9 @@ export const Header: React.FC<MenuProps> = ({ navigation }) => {
     setShow((prev) => !prev);
   }, []);
 
-  console.count("menu");
   return (
     <header className="fixed top-0 w-full z-10">
-      <nav className="w-full flex items-center justify-between relative p-2 md:px-2 md:py-5">
+      <nav className="w-full flex items-center justify-between relative p-2 md:px-2 md:py-4">
         <Image
           width={48}
           height={48}
@@ -33,7 +32,9 @@ export const Header: React.FC<MenuProps> = ({ navigation }) => {
           ))}
         </ul>
 
-        <LocaleSwitch />
+        <div className="hidden md:block">
+          <LocaleSwitch />
+        </div>
 
         {show ? (
           <PiX

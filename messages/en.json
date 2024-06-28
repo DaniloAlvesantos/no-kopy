@@ -18,12 +18,16 @@
       "2": "Don't miss out, schedule a meeting with our team right now!"
     }
   },
-  "questions": [
-    "Do you want to accelerate your digital presence",
-    "Do you want to generate more leads at a better price",
-    "Do you want to boost your e-commerce revenue",
-    "Do you want to explode your sales pipeline",
-    "Do you want to increase your international sales",
-    "Do you want to launch your brand from scratch"
-  ]
+  "questions": {
+    "title": "From advertising to <strong>profit</strong>",
+    "hook": "Well, we get it done for you!",
+    "text": {
+      "0": "Do you want to accelerate your digital presence",
+      "1": "Do you want to generate more leads at a better price",
+      "2": "Do you want to boost your e-commerce revenue",
+      "3": "Do you want to explode your sales pipeline",
+      "4": "Do you want to increase your international sales",
+      "5": "Do you want to launch your brand from scratch"
+    }
+  }
 }
