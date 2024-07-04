@@ -33,7 +33,7 @@ const LocaleSwitcherButton: React.FC<LocaleSwitcherButtonProps> = ({
   return (
     <button onClick={handleSwitchLocale} disabled={isPending} data-testid="changeLocale">
       <Image
-        src={locale !== "pt" ? "/USA-flag.svg" : "/BRAZIL-flag.svg"}
+        src={locale !== "pt" ? "/assets/svg/USA-flag.svg" : "/assets/svg/BRAZIL-flag.svg"}
         width={38}
         height={38}
         alt="Locale flag"

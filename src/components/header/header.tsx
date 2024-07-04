@@ -21,7 +21,7 @@ export const Header: React.FC<MenuProps> = ({ navigation }) => {
         <Image
           width={48}
           height={48}
-          src="/LOGO-1.png"
+          src="/assets/LOGO-1.png"
           className="object-contain"
           alt="Logo"
         />

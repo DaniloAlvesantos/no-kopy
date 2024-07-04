@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "No Kopy",
   description: "The future of your business.",
   icons: {
-    icon: "/LOGO-1.png",
+    icon: "/assets/LOGO-1.png",
   },
 };
 

@@ -29,5 +29,31 @@
       "4": "Você quer aumentar suas vendas internacionalmente",
       "5": "Você quer lançar sua marca do zero"
     }
+  },
+  "services": {
+    "hook": {
+      "subTitle":"Nosso serviços",
+      "title":"O que podemos contruir juntos ?",
+      "text":"Impulsione sua marca com estratégias digitais, design profissional, desenvolvimento sob medida e campanhas de tráfego pago. Invista no futuro do seu negócio hoje!",
+      "buttonText":"Saiva mais"
+    },
+    "cards": {
+      "0": {
+        "title": "Estratégia Digital",
+        "text":"Estratégia personalizadas para sua marca, redes sociais e geração de leads."
+      },
+      "1": {
+        "title": "Desing",
+        "text":"Crie artes impactantes para seu site e redes sociais."
+      },
+      "2": {
+        "title": "Desenvolvimento",
+        "text":"Desenvolvimento de websites, apps e sistemas sob medida para você."
+      },
+      "3": {
+        "title": "Trafego Pago",
+        "text":"Amplie sua marca com campanhas de trafégo pago eficientes."
+      }
+    }
   }
 }

@@ -29,5 +29,31 @@
       "4": "Do you want to increase your international sales",
       "5": "Do you want to launch your brand from scratch"
     }
+  },
+  "services": {
+    "hook": {
+      "subTitle": "Our Services",
+      "title": "What can we build together?",
+      "text": "Boost your brand with digital strategies, professional design, custom development, and paid traffic campaigns. Invest in the future of your business today!",
+      "buttonText": "Learn more"
+    },
+    "cards": {
+      "0": {
+        "title": "Digital Strategy",
+        "text": "Customized strategies for your brand, social media, and lead generation."
+      },
+      "1": {
+        "title": "Design",
+        "text": "Create impactful designs for your website and social media."
+      },
+      "2": {
+        "title": "Development",
+        "text": "Custom development of websites, apps, and systems for you."
+      },
+      "3": {
+        "title": "Paid Traffic",
+        "text": "Expand your brand with efficient paid traffic campaigns."
+      }
+    }
   }
 }

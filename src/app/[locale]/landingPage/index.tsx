@@ -1,10 +1,8 @@
-import { AboutSection } from "@/components/_sections/about/about";
-import { HeroSection } from "@/components/_sections/hero/hero";
-import { Services } from "@/components/_sections/services/serveices";
 import { Header } from "@/components/header/header";
 import { NavigationType } from "@/components/header/main";
-import { generateKeys } from "@/utils/generateKeys";
 import { useTranslations } from "next-intl";
+import { generateKeys } from "@/utils/generateKeys";
+import { HeroSection, AboutSection, ServicesSection, ContactSection } from "@/components/_sections/index";
 
 export function LandingPage() {
 
@@ -20,7 +18,8 @@ export function LandingPage() {
       <Header navigation={Navigation} />
       <HeroSection />
       <AboutSection />
-      {/* <Services /> */}
+      <ServicesSection />
+      <ContactSection />
     </>
   );
 }
