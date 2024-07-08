@@ -55,5 +55,14 @@
         "text": "Expand your brand with efficient paid traffic campaigns."
       }
     }
+  },
+  "contact": {
+    "title": {
+      "text":"Get know our communication channels",
+      "hook":"Don't miss out, start following us to stay updated"
+    },
+    "location": {
+      "title":"Our localization"
+    }
   }
 }

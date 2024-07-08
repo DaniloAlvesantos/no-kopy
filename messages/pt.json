@@ -55,5 +55,19 @@
         "text":"Amplie sua marca com campanhas de trafégo pago eficientes."
       }
     }
+  },
+  "contact": {
+    "title": {
+      "text":"Conheça nossos meios de comunicação",
+      "hook":"Não fique de fora, comece a nos seguir para não perder atualizações"
+    },
+    "location": {
+      "title":"Nossa Localização"
+    }
+  },
+  "book": {
+    "personType": {
+      "":""
+    }
   }
 }

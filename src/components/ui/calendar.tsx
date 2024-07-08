@@ -11,7 +11,7 @@ import { ptBR, enUS } from "date-fns/locale";
 
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
 
-const array = [new Date(2024, 3, 25), new Date(2024, 3, 27)]; // Example of dates.
+const array = [new Date(2024, 6, 10), new Date(2024, 6, 13)]; // Example of dates. Mounth needs to be -1.
 const bookedStyle = "opacity-30 pointer-events-none text-green-600"; // Style.
 
 function Calendar({

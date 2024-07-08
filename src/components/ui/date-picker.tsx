@@ -26,7 +26,7 @@ export function DatePicker(props: Props) {
   
   React.useEffect(() => {
     if(date) {
-      changeDate(format(date, "dd-MM-yyyy"));
+      changeDate(format(date, "yyyy-mm-dd"));
     }
   }, [date, changeDate]);
 
@@ -50,6 +50,7 @@ export function DatePicker(props: Props) {
           selected={date}
           onSelect={setDate}
           initialFocus
+          // modifiers={}
         />
       </PopoverContent>
     </Popover>

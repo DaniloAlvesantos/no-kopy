@@ -2,7 +2,8 @@ import { Header } from "@/components/header/header";
 import { NavigationType } from "@/components/header/main";
 import { useTranslations } from "next-intl";
 import { generateKeys } from "@/utils/generateKeys";
-import { HeroSection, AboutSection, ServicesSection, ContactSection } from "@/components/_sections/index";
+import { HeroSection, AboutSection, ServicesSection, ContactSection, BookSection } from "@/components/_sections/index";
+import { Footer } from "@/components/footer/footer";
 
 export function LandingPage() {
 
@@ -20,6 +21,8 @@ export function LandingPage() {
       <AboutSection />
       <ServicesSection />
       <ContactSection />
+      <BookSection />
+      <Footer />
     </>
   );
 }

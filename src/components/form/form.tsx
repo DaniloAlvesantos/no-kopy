@@ -22,7 +22,7 @@ const FormSchema = z.object({
 
 type FormPropsSchema = z.infer<typeof FormSchema>;
 
-export const Form: React.FC = () => {
+export const FormBook: React.FC = () => {
   const form = useForm<FormPropsSchema>({
     resolver: zodResolver(FormSchema),
   });
@@ -188,7 +188,7 @@ export const Form: React.FC = () => {
           </div>
           <div translate="no">
             <div className="my-4 flex flex-col w-full">
-              <Label className="mb-3">Escolha uma data para reuniao</Label>
+              <Label className="mb-3">Escolha uma data para reunião</Label>
               <DatePicker changeDate={setDate} />
             </div>
             <div className="my-4 flex flex-col w-full">

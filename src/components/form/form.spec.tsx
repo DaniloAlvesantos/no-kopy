@@ -1,6 +1,6 @@
 import { render, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { Form } from "./index";
+import { Form } from "./form";
 
 it("Should render all components", () => {
   const { getByText, getByPlaceholderText, getByLabelText } = render(<Form />);

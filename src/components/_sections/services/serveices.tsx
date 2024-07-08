@@ -1,14 +1,15 @@
-import React, { ElementType } from "react";
+import React, { ComponentType } from "react";
 import { generateKeys } from "@/utils/generateKeys";
 import { useTranslations } from "next-intl";
 import { PiBrain, PiDevices, PiMonitor, PiTrendUp } from "react-icons/pi";
+import { IconBaseProps } from "react-icons";
 import { Card } from "@/components/card/card";
 import { Button } from "@/components/ui/button";
 
 type DataType = {
   title: string;
   text: string;
-  icon: ElementType;
+  icon: ComponentType<IconBaseProps>;
 };
 
 const Icons = [PiBrain, PiDevices, PiMonitor, PiTrendUp];
@@ -43,9 +44,7 @@ const ServicesSection: React.FC = () => {
           {Data.map((value, i) => (
             <Card key={i}>
               <span>
-                {React.createElement(value.icon, {
-                  className: "size-10 text-NKGreen-500",
-                })}
+                <value.icon className="size-10 text-NKGreen-500" />
                 <h3 className="font-montserrat font-bold text-lg mt-2">
                   {value.title}
                 </h3>
