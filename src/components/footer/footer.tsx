@@ -1,13 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { NavigationType } from "@/components/header/main";
 import { generateKeys } from "@/utils/generateKeys";
 import { useTranslations } from "next-intl";
-
-interface LiNavigationProps {
-  text: string;
-  url: string;
-}
+import { FooterProps, LiNavigationProps } from "./main";
 
 const LiNavigation = ({ text, url }: LiNavigationProps) => {
   return (
@@ -17,9 +12,7 @@ const LiNavigation = ({ text, url }: LiNavigationProps) => {
   );
 };
 
-interface FooterProps {
-  navigation: NavigationType[];
-}
+
 
 const Footer: React.FC<FooterProps> = ({ navigation }) => {
   const t = useTranslations("footer");

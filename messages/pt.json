@@ -66,8 +66,9 @@
     }
   },
   "book": {
-    "personType": {
-      "": ""
+    "title": {
+      "text":"Agende sua reunião",
+      "subTitle":"em menos de <strong>5m</strong>"
     }
   },
   "footer": {

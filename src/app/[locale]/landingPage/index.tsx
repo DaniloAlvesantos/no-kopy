@@ -1,4 +1,4 @@
-import { Header } from "@/components/header/header";
+import { Menu } from "@/components/header/index";
 import { NavigationType } from "@/components/header/main";
 import { useTranslations } from "next-intl";
 import { generateKeys } from "@/utils/generateKeys";
@@ -16,7 +16,7 @@ export function LandingPage() {
 
   return (
     <>
-      <Header navigation={Navigation} />
+      <Menu navigation={Navigation} />
       <HeroSection />
       <AboutSection />
       <ServicesSection />

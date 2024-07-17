@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { MenuProps } from "../main";
+import { AsideProps } from "../main";
 import { motion } from "framer-motion";
 import { LocaleSwitch } from "@/components/localeSwitch/localeSwitch";
 
@@ -22,7 +22,7 @@ const framerText = (delay: number) => {
   };
 };
 
-const AsideMenu: React.FC<MenuProps> = React.memo(({ navigation }) => {
+const AsideMenu: React.FC<AsideProps> = React.memo(({ navigation }) => {
   return (
     <motion.aside
       {...framerSlideBar}

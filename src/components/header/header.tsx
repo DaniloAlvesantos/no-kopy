@@ -1,22 +1,45 @@
 "use client";
 
 import Image from "next/image";
-import { MenuProps } from "./main";
-import { AsideMenu } from "./ui/aside";
+import { HeaderProps } from "./main";
 import { PiList, PiX } from "react-icons/pi";
-import { useCallback, useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { useState } from "react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { ListComponent } from "./ui/li.component";
 import { LocaleSwitch } from "../localeSwitch/localeSwitch";
 
-export const Header: React.FC<MenuProps> = ({ navigation }) => {
-  const [show, setShow] = useState<boolean>(false);
-  const handleShow = useCallback(() => {
-    setShow((prev) => !prev);
-  }, []);
+export const Header: React.FC<HeaderProps> = ({
+  navigation,
+  handleShow,
+  show,
+}) => {
+  const [hidden, setHidden] = useState<boolean>(false);
+  const { scrollY } = useScroll();
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    const previous = scrollY.getPrevious();
+
+    if (!previous) {
+      return;
+    }
+
+    if (latest > previous && latest > 150) {
+      setHidden(true);
+    } else {
+      setHidden(false);
+    }
+  });
 
   return (
-    <header className="fixed top-0 w-full z-10">
+    <motion.header
+      variants={{
+        visible: { y: 0 },
+        hidden: { y: "-100%" },
+      }}
+      animate={hidden ? "hidden" : "visible"}
+      transition={{ duration: 0.5, type: "spring" }}
+      className="fixed top-0 w-full z-10"
+    >
       <nav className="w-full flex items-center justify-between relative p-2 md:px-2 md:py-4">
         <Image
           width={48}
@@ -47,11 +70,7 @@ export const Header: React.FC<MenuProps> = ({ navigation }) => {
             onClick={handleShow}
           />
         )}
-
-        <AnimatePresence mode="wait" initial={false}>
-          {show && <AsideMenu navigation={navigation} />}
-        </AnimatePresence>
       </nav>
-    </header>
+    </motion.header>
   );
 };
