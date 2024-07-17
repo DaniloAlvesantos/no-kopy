@@ -22,7 +22,7 @@ export function LandingPage() {
       <ServicesSection />
       <ContactSection />
       <BookSection />
-      <Footer />
+      <Footer navigation={Navigation} />
     </>
   );
 }

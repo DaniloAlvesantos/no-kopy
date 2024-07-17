@@ -58,11 +58,28 @@
   },
   "contact": {
     "title": {
-      "text":"Get know our communication channels",
-      "hook":"Don't miss out, start following us to stay updated"
+      "text": "Get know our communication channels",
+      "hook": "Don't miss out, start following us to stay updated"
     },
     "location": {
-      "title":"Our localization"
+      "title": "Our localization"
+    }
+  },
+  "book": {
+    "personType": {
+      "": ""
+    }
+  },
+  "footer": {
+    "links": {
+      "info": {
+        "0": { "text": "See on map", "url": "" },
+        "1": { "text": "Products", "url": "" }
+      },
+      "widgets": {
+        "0": { "text": "FeedBack", "url": "" },
+        "1": { "text": "Careers", "url": "" }
+      }
     }
   }
 }
