@@ -58,17 +58,17 @@
   },
   "contact": {
     "title": {
-      "text": "Get know our communication channels",
+      "text": "Get to know our communication channels",
       "hook": "Don't miss out, start following us to stay updated"
     },
     "location": {
-      "title": "Our localization"
+      "title": "Our Location"
     }
   },
   "book": {
     "title": {
-      "text":"Book your meeting",
-      "subTitle":"in less than <strong>5m</strong>"
+      "text": "Book your meeting",
+      "subTitle": "in less than <strong>5m</strong>"
     }
   },
   "footer": {
@@ -78,8 +78,56 @@
         "1": { "text": "Products", "url": "" }
       },
       "widgets": {
-        "0": { "text": "FeedBack", "url": "" },
+        "0": { "text": "Feedback", "url": "" },
         "1": { "text": "Careers", "url": "" }
+      }
+    }
+  },
+  "forms": {
+    "signIn": {
+      "formFields": {
+        "0": { "label": "Email", "placeholder": "company@gmail.com" },
+        "1": { "label": "Identification", "placeholder": "Your identification" }
+      },
+      "title": "Access your account",
+      "button": "Sign In",
+      "card": {
+        "title": "Don't have an account yet?",
+        "text": "Create your account right now"
+      }
+    },
+    "signUp": {
+      "formFields": {
+        "0": { "label": "Name", "placeholder": "Enter your name" },
+        "1": { "label": "Email", "placeholder": "Enter your email" },
+        "2": { "label": "Instagram", "placeholder": "Enter your Instagram" },
+        "3": { "label": "Country", "placeholder": "Choose your country" },
+        "4": {
+          "label": "Identification Type",
+          "placeholder": "Choose your identification"
+        },
+        "5": {
+          "label": "Identification",
+          "placeholder": "Enter your identification"
+        }
+      },
+      "title": "Create your account",
+      "subTitle": "Create an account for your company or business",
+      "button": "Sign Up"
+    },
+    "meeting": {
+      "formFields": {
+        "0": { "label": "Name", "placeholder": "Enter your name" },
+        "1": { "label": "Instagram", "placeholder": "Enter your Instagram" },
+        "2": { "label": "Email", "placeholder": "Enter your email" },
+        "3": {
+          "label": "Identification Type",
+          "placeholder": "Choose your identification"
+        },
+        "4": {
+          "label": "Identification",
+          "placeholder": "Enter your identification"
+        }
       }
     }
   }

@@ -7,12 +7,7 @@ import { DayPicker } from "react-day-picker";
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
 
-import { ptBR, enUS } from "date-fns/locale";
-
 export type CalendarProps = React.ComponentProps<typeof DayPicker>;
-
-const array = [new Date(2024, 7, 10), new Date(2024, 7, 13)]; // Example of dates. Mounth needs to be -1.
-const bookedStyle = "opacity-30 pointer-events-none text-green-600"; // Style.
 
 function Calendar({
   className,
@@ -20,16 +15,9 @@ function Calendar({
   showOutsideDays = true,
   ...props
 }: CalendarProps) {
-  let minDate = new Date();
-  minDate.setUTCDate(minDate.getDate() + 3);
-
   return (
     <DayPicker
       {...props}
-      modifiers={{ booked: array }} // Booked it's just a var, you can change for anything.
-      modifiersClassNames={{ booked: bookedStyle }} // You need to match with the var.
-      locale={ptBR || enUS}
-      disabled={(date) => date < new Date() || date <= minDate}
       showOutsideDays={showOutsideDays}
       className={cn("p-3", className)}
       classNames={{

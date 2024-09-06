@@ -1,4 +1,4 @@
-import { FormBook } from "@/components/forms/form"
+import { FormBook } from "@/components/forms/meeting"
 import { useTranslations } from "next-intl";
 
 const BookSection: React.FC = () => {

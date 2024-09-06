@@ -10,6 +10,7 @@ export const FormSchema = z.object({
   country: z.string().max(3, { message: "The length passed by." }),
 });
 
+// IDENTIFICATION VALUES VALIDATION
 const IdentificationValidation = {
   CPF: (value: string) => (value.length !== 11 ? "Invalid" : "Success"),
   CNPJ: (value: string) => (value.length !== 14 ? "Invalid" : "Success"),
@@ -23,26 +24,22 @@ export type FormPropsSchema = z.infer<typeof FormSchema>;
 // FORM FIELD TYPE
 export type FormFieldDataProps = {
   name: keyof FormPropsSchema;
-  label: string;
   componentType:
     | {
         kind: "input";
         values: {
-          placeholder: string;
           type: "text" | "email";
         };
       }
     | {
         kind: "inputMask";
         values: {
-          placeholder: string;
           inputMask: boolean;
         };
       }
     | {
         kind: "select";
         values: {
-          placeholder: string;
           items: {
             value: string;
             text: string;
@@ -55,38 +52,32 @@ export type FormFieldDataProps = {
 export const FormFieldData: FormFieldDataProps[] = [
   {
     name: "name",
-    label: "Nome",
     componentType: {
       kind: "input",
-      values: { placeholder: "Digite seu nome", type: "text" },
+      values: { type: "text" },
     },
   },
   {
     name: "email",
-    label: "Email",
     componentType: {
       kind: "input",
-      values: { placeholder: "Digite seu email", type: "email" },
+      values: { type: "email" },
     },
   },
   {
     name: "instagram",
-    label: "Instagram",
     componentType: {
       kind: "input",
       values: {
-        placeholder: "Digite o instagram do seu negocio/empresa",
         type: "text",
       },
     },
   },
   {
     name: "country",
-    label: "Pais",
     componentType: {
       kind: "select",
       values: {
-        placeholder: "Escolha seu país",
         items: [
           { value: "BR", text: "Brazil" },
           { value: "CA", text: "Canada" },
@@ -96,11 +87,9 @@ export const FormFieldData: FormFieldDataProps[] = [
   },
   {
     name: "personType",
-    label: "PersonType",
     componentType: {
       kind: "select",
       values: {
-        placeholder: "Escolha seu tipo de identificação",
         items: [
           { value: "CPF", text: "CPF" },
           { value: "CNPJ", text: "CNPJ" },
@@ -112,13 +101,22 @@ export const FormFieldData: FormFieldDataProps[] = [
   },
   {
     name: "identification",
-    label: "Identificacao",
     componentType: {
       kind: "inputMask",
       values: {
-        placeholder: "Digite sua identificação",
         inputMask: true,
       },
     },
   },
 ];
+
+export const handleForm = async (value: FormPropsSchema) => {
+  console.log(value);
+
+  // const api = await noKopyApi.post("/client/signin", { value });
+
+  // if (!api.data) {
+  //   console.log("status:", api.status);
+  //   console.log("text:", api.statusText);
+  // }
+};

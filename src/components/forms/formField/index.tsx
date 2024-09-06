@@ -73,7 +73,10 @@ export const FormFieldSelect = <TFieldValues extends FieldValues>(
       render={({ field }) => (
         <FormComp.FormItem>
           <FormComp.FormLabel>{props.label}</FormComp.FormLabel>
-          <SelectComp.Select onValueChange={field.onChange} defaultValue={field.value}>
+          <SelectComp.Select
+            onValueChange={field.onChange}
+            defaultValue={field.value}
+          >
             <FormComp.FormControl>
               <SelectComp.SelectTrigger>
                 <SelectComp.SelectValue placeholder={props.placeholder} />
@@ -81,7 +84,9 @@ export const FormFieldSelect = <TFieldValues extends FieldValues>(
             </FormComp.FormControl>
             <SelectComp.SelectContent>
               {props.items.map((item, idx) => (
-                <SelectComp.SelectItem value={item.value} key={idx}>{item.text}</SelectComp.SelectItem>
+                <SelectComp.SelectItem value={item.value} key={idx}>
+                  {item.text}
+                </SelectComp.SelectItem>
               ))}
             </SelectComp.SelectContent>
           </SelectComp.Select>

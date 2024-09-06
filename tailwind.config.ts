@@ -100,6 +100,9 @@ const config = {
         montserrat: ["var(--font-montserrat)", "sans-serif"],
         firaSans: ["var(--font-fira-sans)", "sans-serif"],
       },
+      backgroundImage: {
+        "singBackground":"url('/assets/buildings.png')",
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],

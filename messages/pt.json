@@ -6,21 +6,21 @@
     "3": { "title": "agendar", "href": "#book" }
   },
   "hero": {
-    "title": "Agência que irá impulcionar seus négocios",
+    "title": "Agência que irá impulsionar seus negócios",
     "description": "Nossa agência experiente impulsionará seu negócio com estratégias personalizadas e resultados excepcionais. Confie em nossa equipe para elevar sua marca ao próximo nível.",
     "button-text": "faça parte"
   },
   "about": {
-    "title": "Quem nos <strong>somos ? </strong>",
+    "title": "Quem nos <strong>somos?</strong>",
     "description": {
-      "0": "Somos uma empresa de marketing digital, com a dedicação em destacar sua marca no meio digital. Com estratégias somado com nossa equipe profissional, geramos resultados imediatos em sua marca.",
-      "1": "Nosso trabalho é fazer você e sua empresa impactar a concorrência, com qualidade em audiovisual, estratégias, gatilhos, etc.",
+      "0": "Somos uma empresa de marketing digital, com a dedicação em destacar sua marca no meio digital. Com estratégias combinadas com nossa equipe profissional, geramos resultados imediatos para sua marca.",
+      "1": "Nosso trabalho é fazer você e sua empresa impactarem a concorrência, com qualidade em audiovisual, estratégias, gatilhos, etc.",
       "2": "Não fique de fora, agende uma reunião com nossa equipe agora mesmo!"
     }
   },
   "questions": {
     "title": "De publicidade para <strong>lucro</strong>",
-    "hook": "nos fazemos isso para você!",
+    "hook": "Nós fazemos isso para você!",
     "text": {
       "0": "Quer acelerar sua presença digital",
       "1": "Você deseja gerar mais leads com melhor preço",
@@ -32,18 +32,18 @@
   },
   "services": {
     "hook": {
-      "subTitle": "Nosso serviços",
-      "title": "O que podemos contruir juntos ?",
+      "subTitle": "Nossos serviços",
+      "title": "O que podemos construir juntos?",
       "text": "Impulsione sua marca com estratégias digitais, design profissional, desenvolvimento sob medida e campanhas de tráfego pago. Invista no futuro do seu negócio hoje!",
-      "buttonText": "Saiva mais"
+      "buttonText": "Saiba mais"
     },
     "cards": {
       "0": {
         "title": "Estratégia Digital",
-        "text": "Estratégia personalizadas para sua marca, redes sociais e geração de leads."
+        "text": "Estratégias personalizadas para sua marca, redes sociais e geração de leads."
       },
       "1": {
-        "title": "Desing",
+        "title": "Design",
         "text": "Crie artes impactantes para seu site e redes sociais."
       },
       "2": {
@@ -51,8 +51,8 @@
         "text": "Desenvolvimento de websites, apps e sistemas sob medida para você."
       },
       "3": {
-        "title": "Trafego Pago",
-        "text": "Amplie sua marca com campanhas de trafégo pago eficientes."
+        "title": "Tráfego Pago",
+        "text": "Amplie sua marca com campanhas de tráfego pago eficientes."
       }
     }
   },
@@ -67,8 +67,8 @@
   },
   "book": {
     "title": {
-      "text":"Agende sua reunião",
-      "subTitle":"em menos de <strong>5m</strong>"
+      "text": "Agende sua reunião",
+      "subTitle": "em menos de <strong>5m</strong>"
     }
   },
   "footer": {
@@ -78,8 +78,56 @@
         "1": { "text": "Produtos", "url": "" }
       },
       "widgets": {
-        "0": { "text": "FeedBack", "url": "" },
+        "0": { "text": "Feedback", "url": "" },
         "1": { "text": "Carreiras", "url": "" }
+      }
+    }
+  },
+  "forms": {
+    "signIn": {
+      "formFields": {
+        "0": { "label": "Email", "placeholder": "empresa@gmail.com" },
+        "1": { "label": "Identificação", "placeholder": "Sua identificação" }
+      },
+      "title": "Acesse sua conta",
+      "button": "Entrar",
+      "card": {
+        "title": "Ainda não tem uma conta?",
+        "text": "Crie sua conta agora mesmo"
+      }
+    },
+    "signUp": {
+      "formFields": {
+        "0": { "label": "nome", "placeholder": "Informe seu nome" },
+        "1": { "label": "Email", "placeholder": "Informe seu email" },
+        "2": { "label": "Instagram", "placeholder": "Informe seu Instagram" },
+        "3": { "label": "Pais", "placeholder": "Escolha seu país" },
+        "4": {
+          "label": "Tipo de identificação",
+          "placeholder": "Escolha seu identificação"
+        },
+        "5": {
+          "label": "Identificação",
+          "placeholder": "Informe sua identificação"
+        }
+      },
+      "title": "Crie sua conta",
+      "subTitle": "Crie sua conta para seu negócio ou empresa",
+      "button": "Criar"
+    },
+    "meeting": {
+      "formFields": {
+        "0": { "label": "Nome", "placeholder": "Informe seu nome" },
+        "1": { "label": "Instagram", "placeholder": "Informe seu Instagram" },
+        "2": { "label": "Email", "placeholder": "Informe seu email" },
+        "3": {
+          "label": "Tipo de Identificação",
+          "placeholder": "Escolha seu identificação"
+        },
+        "4": {
+          "label": "Identificação",
+          "placeholder": "Informe sua identificação"
+        }
       }
     }
   }
