@@ -129,6 +129,46 @@
           "placeholder": "Enter your identification"
         }
       }
+    },
+    "profile": {
+      "formFields": {
+        "0": { "label": "Company", "placeholder": "Company's name" },
+        "1": { "label": "Name", "placeholder": "CEO name" },
+        "2": { "label": "Instagram", "placeholder": "Compan's instagram page" },
+        "3": { "label": "Email", "placeholder": "Contact email" },
+        "4": {
+          "label": "Identification Type",
+          "placeholder": "Company or small business"
+        },
+        "5": {
+          "label": "Identification",
+          "placeholder": "Identifcation number"
+        },
+        "6": { "label": "Country", "placeholder": "Your Localization" }
+      },
+      "button": "Update"
+    }
+  },
+  "dashboard": {
+    "aside": {
+      "navigation": {
+        "0": "Home",
+        "1": "Profile",
+        "2": "Meetings"
+      }
+    },
+    "main": {
+      "welcome": "{hour, plural, =0 {Good Morning} =1 {Good Afternoon} other {Good Night}}, {name}"
+    },
+    "profile": {
+      "title": "Profile",
+      "subTitle": "Edit your informations."
+    },
+    "myMeetings": {
+      "title": "My Meetings",
+      "subTitle": "Check your booked meetings out.",
+      "topic": "Meetings",
+      "button": "Join"
     }
   }
 }

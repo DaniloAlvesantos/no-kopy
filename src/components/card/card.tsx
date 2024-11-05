@@ -2,19 +2,21 @@ import React from "react";
 import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
-const CardVariants = cva("rounded-lg flex flex-col border-2 p-4 transiiton duration-500 ease", {
+const CardVariants = cva("rounded-lg flex flex-col border-2 p-4 transition duration-500 ease", {
   variants: {
     variant: {
       default: "items-start justify-center gap-4 border-NKCian-400 bg-NKGreen-700",
       secondaray: "items-center justify-center border-NKGreen-500 bg-NKBlack-500",
-      glass:"items-center justify-center border-NKGreen-500 bg-NKWhite-500/10 backdrop-blur-sm"
+      glass:"items-center justify-center border-NKGreen-500 bg-NKWhite-500/10 backdrop-blur-sm",
+      meeting:"items-start justify-between gap-2 border-accent rounded-xl p-2 relative"
     },
     size: {
       default: "w-full xl:w-[22.375rem] xl:h-[10.9375rem]",
       full: "w-full h-auto",
       glass:"min-w-[5.983rem]",
       sm:"size-[5.983rem]",
-      auto:"w-auto h-auto"
+      auto:"w-auto h-auto",
+      meeting: "w-[16rem]"
     },
   },
   defaultVariants: {

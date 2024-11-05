@@ -129,6 +129,46 @@
           "placeholder": "Informe sua identificação"
         }
       }
+    },
+    "profile": {
+      "formFields": {
+        "0": { "label": "Empresa", "placeholder": "Nome da empresa" },
+        "1": { "label": "Nome", "placeholder": "Nome do CEO" },
+        "2": { "label": "Instagram", "placeholder": "Pagina da empresa" },
+        "3": { "label": "Email", "placeholder": "Email de contato" },
+        "4": {
+          "label": "Tipo de Identificação",
+          "placeholder": "Empresa ou pessoa fisica"
+        },
+        "5": {
+          "label": "Identificação",
+          "placeholder": "Numero de identificação"
+        },
+        "6": { "label": "Pais", "placeholder": "Sua localiazação" }
+      },
+      "button":"Atualizar"
+    }
+  },
+  "dashboard": {
+    "aside": {
+      "navigation": {
+        "0": "Início",
+        "1": "Perfil",
+        "2": "Reuniões"
+      }
+    },
+    "main": {
+      "welcome": "{hour, plural, =0 {Bom Dia} =1 {Boa Tarde} other {Boa Noite}}, {name}"
+    },
+    "profile": {
+      "title": "Perfil",
+      "subTitle": "Altere suas informações."
+    },
+    "myMeetings": {
+      "title": "Minhas Reuniões",
+      "subTitle": "Confira quais são suas reuniões agendadas.",
+      "topic": "Reunião",
+      "button": "Participar"
     }
   }
 }

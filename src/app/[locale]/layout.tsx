@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { Montserrat, Fira_Sans } from "next/font/google";
 
 import "./globals.css";
+import { AuthConextProvider } from "@/context/authContext";
 
 const firaSans = Fira_Sans({
   subsets: ["latin"],
@@ -40,7 +41,9 @@ export default async function RootLayout({
         className={`${firaSans.variable} ${montserrat.variable} scroll-smooth`}
       >
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <AuthConextProvider>
+            {children}
+          </AuthConextProvider>
         </NextIntlClientProvider>
       </body>
     </html>

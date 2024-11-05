@@ -1,4 +1,3 @@
-import { noKopyApi } from "@/lib/api";
 import { z } from "zod";
 
 // FORM VALIDATION
@@ -50,8 +49,3 @@ export const FormFieldData: FormFieldDataProps[] = [
   },
 ];
 
-export const handleForm = async (value: FormPropsSchema) => {
-  console.log(value);
-
-  // const api = await noKopyApi.post("/client/signin", { value });
-};

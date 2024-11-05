@@ -1,9 +1,24 @@
 "use client";
 
 import React from "react";
-import { AsideProps } from "../main";
+import {
+  AsideDashboardData,
+  AsideDashboardProps,
+  AsideMenuProps,
+  AsideProps,
+  AsideVariants,
+} from "../main";
+
 import { motion } from "framer-motion";
 import { LocaleSwitch } from "@/components/localeSwitch/localeSwitch";
+import { cn } from "@/lib/utils";
+
+import { Link } from "@/navigation";
+import { LogOut } from "lucide-react";
+import { destroyCookie } from "nookies";
+import { useRouter } from "@/navigation";
+import { generateKeys } from "@/utils/generateKeys";
+import { useTranslations } from "next-intl";
 
 const framerSlideBar = {
   initial: { x: "-100%" },
@@ -22,12 +37,20 @@ const framerText = (delay: number) => {
   };
 };
 
-const AsideMenu: React.FC<AsideProps> = React.memo(({ navigation }) => {
+const Aside = ({ children, size, variant, className }: AsideProps) => {
   return (
     <motion.aside
       {...framerSlideBar}
-      className="fixed left-0 top-0 bottom-0 z-50 bg-NKBlack-500/60 backdrop-blur-sm border-2 border-NKGreen-500 md:hidden m-2 rounded-md w-full max-w-[15rem]"
+      className={cn(AsideVariants({ variant, size, className }))}
     >
+      {children}
+    </motion.aside>
+  );
+};
+
+const AsideMenu = React.memo(({ navigation }: AsideMenuProps) => {
+  return (
+    <Aside>
       <div className="relative w-full h-full flex items-center justify-center">
         <ul className="font-montserrat font-bold uppercase leading-8 tracking-widest">
           {navigation.map((item, idx) => (
@@ -41,8 +64,50 @@ const AsideMenu: React.FC<AsideProps> = React.memo(({ navigation }) => {
           <LocaleSwitch />
         </span>
       </div>
-    </motion.aside>
+    </Aside>
   );
 });
 
-export { AsideMenu };
+const AsideDashboard = React.memo(() => {
+  const router = useRouter();
+  const signOut = () => {
+    destroyCookie(undefined, "nokopy.token");
+    router.push("/signin");
+  };
+
+  const t = useTranslations("dashboard");
+
+  const AsideKeys = generateKeys(AsideDashboardData.length);
+  const AsideData: AsideDashboardProps["items"] = AsideKeys.map((i) => ({
+    icon: AsideDashboardData[i].icon,
+    text: t(`aside.navigation.${i}`),
+    href: AsideDashboardData[i].href,
+  }));
+
+  return (
+    <Aside variant="secondaray" size="secondaray" className="relative">
+      <div className="p-2">
+        {AsideData.map((item, idx) => (
+          <Link
+            key={idx}
+            href={item.href}
+            className="flex items-center justify-start gap-2 my-2 hover:bg-accent rounded-md p-3"
+          >
+            <item.icon className="size-6 text-white" strokeWidth={1.5} />
+            <p className="font-montserrat hidden sm:block">{item.text}</p>
+          </Link>
+        ))}
+      </div>
+
+      <LogOut
+        className="absolute bottom-4 left-2 cursor-pointer hover:text-NKGreen-300 p-1 size-8"
+        onClick={signOut}
+      />
+    </Aside>
+  );
+});
+
+Aside.Menu = AsideMenu;
+Aside.Dashboard = AsideDashboard;
+
+export { Aside };

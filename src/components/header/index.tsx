@@ -4,7 +4,7 @@ import { useCallback, useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Header } from "./header";
 import { MenuProps } from "./main";
-import { AsideMenu } from "./ui/aside";
+import { Aside } from "./ui/aside";
 
 export function Menu({ navigation }: MenuProps) {
   const [show, setShow] = useState<boolean>(false);
@@ -17,7 +17,7 @@ export function Menu({ navigation }: MenuProps) {
     <>
       <Header show={show} handleShow={handleShow} navigation={navigation} />
       <AnimatePresence mode="wait" initial={false}>
-        {show && <AsideMenu navigation={navigation} />}
+        {show && <Aside.Menu navigation={navigation} />}
       </AnimatePresence>
     </>
   );

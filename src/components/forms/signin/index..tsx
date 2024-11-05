@@ -2,18 +2,16 @@ import { useState } from "react";
 
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  FormFieldData,
-  FormSchema,
-  handleForm,
-  FormPropsSchema,
-} from "./types";
+import { FormFieldData, FormSchema, FormPropsSchema } from "./types";
 
 import * as FormComp from "@/components/ui/form";
 import { FormFieldInput } from "../formField";
 import { Button } from "@/components/ui/button";
+import { Loading } from "@/components/loading";
 
 import { useTranslations } from "next-intl";
+import { useAuth } from "@/hooks/useAuth";
+import { useRouter } from "@/navigation";
 
 export const SignInForm = () => {
   const form = useForm<FormPropsSchema>({
@@ -22,6 +20,8 @@ export const SignInForm = () => {
 
   const t = useTranslations("forms.signIn");
   const [mask, setMask] = useState<string>();
+  const [loading, setLoading] = useState<boolean>(false);
+  const router = useRouter();
 
   const handleMask = (event: React.FocusEvent<HTMLInputElement>) => {
     const value = event.target.value;
@@ -34,6 +34,21 @@ export const SignInForm = () => {
         return setMask("99.999.999/9999-99");
       default:
         return setMask("");
+    }
+  };
+
+  const { signIn } = useAuth();
+
+  const handleForm = async (value: FormPropsSchema) => {
+    const { email, identification } = value;
+
+    try {
+      setLoading((prev) => !prev);
+      await signIn({ email, identification });
+    } catch (err) {
+      console.error(err);
+    } finally {
+      router.push("/dashboard");
     }
   };
 
@@ -77,8 +92,9 @@ export const SignInForm = () => {
           type="submit"
           variant="outline"
           className="border-NKGreen-500 hover:bg-NKGreen-500"
+          disabled={loading}
         >
-          {t("button")}
+          {loading ? <Loading isDark /> : t("button")}
         </Button>
       </form>
     </FormComp.Form>

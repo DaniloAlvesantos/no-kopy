@@ -85,6 +85,7 @@ export const FormBook: React.FC = () => {
                       label={t(`${idx}.label`)}
                       placeholder={t(`${idx}.label`)}
                       items={item.componentType.values.items}
+                      key={idx}
                     />
                   );
               }

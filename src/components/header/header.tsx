@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { HeaderProps } from "./main";
-import { PiList, PiX } from "react-icons/pi";
+import { AlignLeft, X } from "lucide-react"
 import { useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { ListComponent } from "./ui/li.component";
@@ -60,13 +60,13 @@ export const Header: React.FC<HeaderProps> = ({
         </div>
 
         {show ? (
-          <PiX
-            className={`text-NKWhite size-12 md:hidden`}
+          <X
+            className={`text-NKWhite size-10 md:hidden`}
             onClick={handleShow}
           />
         ) : (
-          <PiList
-            className={`text-NKWhite size-12 md:hidden`}
+          <AlignLeft
+            className={`text-NKWhite size-10 md:hidden`}
             onClick={handleShow}
           />
         )}
